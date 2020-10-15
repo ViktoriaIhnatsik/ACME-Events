@@ -1,5 +1,9 @@
+Uppgiften med grafisk profil ska mynna ut i ett dokument. 
+Om en person läser detta dokument ska den personen kunna förstå hur logga, färger, 
+typsnitt, marginaler, justering osv ska användas på hemsidan.
+-----------------------------
 ACME Events
-
+-----------------------------
 Logga green-blue med bakgrund light grey (följ färgtema)
 svart text i logga
 
@@ -12,6 +16,6 @@ fonts: Roboto (lite fetare) och Open sans
 
 // logga / knappar / menyer
 
---------------------------
+-----------------------------
 
 Logga uppe högra hörn. Bild finns. 
