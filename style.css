@@ -30,13 +30,17 @@ body {
   grid-gap: 0 5px;
   padding: 2em 1em;
 }
- .leftClmn {
+.leftClmn {
   grid-area: leftClmn;
   height: auto;
   font-size: 0.8em;
  }
 
- .mainContent {
+#menu {
+  padding: 1em;
+} 
+
+.mainContent {
    display: grid;
    grid-area: mainContent;
    grid-template-columns: 1fr 1fr 1fr;
@@ -45,7 +49,7 @@ body {
    padding: 1em;
  }
 
- .photo {
+.photo {
    position: relative;
    max-width: 100%;
    max-height: 100%;
