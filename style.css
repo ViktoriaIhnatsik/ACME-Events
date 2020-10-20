@@ -21,6 +21,20 @@ body {
   background-color: #1F8FED;
 }
 
+.header-logo {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.deskFindEvents {
+  margin-top: 45px;
+}
+
+.mainContent {
+  margin-top: 45px;
+}
+
 .wrapper {
   display: grid;
   grid-area: wrapper;
