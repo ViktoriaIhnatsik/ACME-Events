@@ -67,11 +67,8 @@ body {
    position: relative;
    max-width: 100%;
    max-height: 100%;
-   background-color: gold;
+   background-color: #8A7992;
  }
-
-
-
 
 .footer {
   display: grid;
@@ -84,3 +81,54 @@ body {
   background-color: #1F294C;
   color: #F8F6F3;
 }
+
+.bigPhoto {
+  max-width: 40em;
+}
+
+.eventFormat {
+  font-size: 1.5em;
+  padding: 0 0 0.7em 0;
+}
+
+.eventDate {
+  font-size: 1em;
+  padding: 0 0 0.7em 0;
+  font-weight: bold;
+}
+
+.eventName {
+  font-size: 2.5em;
+  padding: 0.7em 0;
+}
+
+.eventContent {
+  max-width: 50em;
+  padding-right: 5em;
+}
+
+.eventInfo {
+  text-align: justify;
+}
+
+/* #btnRegist {
+  margin: 1em;
+  background-color: #1F8FED;
+  height: 2em;
+} */
+#btnRegist
+{ box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #1F8FED 100%);
+	background-color:#1F8FED;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:0.3em 3em;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #3d768a;
+  margin: 2em;
+  }
