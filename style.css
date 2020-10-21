@@ -111,29 +111,6 @@ body {
   text-align: justify;
 }
 
-/* #btnRegist {
-  margin: 1em;
-  background-color: #1F8FED;
-  height: 2em;
-} 
-
-#btnRegist
-{ box-shadow: 0px 10px 14px -7px #1F8FED;
-	background:linear-gradient(to bottom,  #599bb3 5%, #1F8FED 100%);
-	background-color: #1F8FED;
-	border-radius: 6px;
-	display:inline-block;
-	cursor:pointer;
-	color: #ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:0.3em 1.5em;
-	text-decoration:none;
-  text-shadow:0px 1px 0px #3d768a;
-  margin: 1em;
-  }*/
-
 #btnRegist{
   background-color:#76C4E2;
 	border-radius:25px;
@@ -152,9 +129,11 @@ body {
   .trademark{
     font-size: 1em;
     padding: 15px 15px; 
+    font-weight: bold;
   }
 
   .adress{
     font-size: 1em;
     padding-top: 15px;
+    font-weight: bold;
   }
