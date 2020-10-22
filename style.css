@@ -21,6 +21,20 @@ body {
   background-color: #1F8FED;
 }
 
+.headerLogo {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.deskFindEvents {
+  margin-top: 45px;
+}
+
+.mainContent {
+  margin-top: 45px;
+}
+
 .wrapper {
   display: grid;
   grid-area: wrapper;
@@ -30,13 +44,17 @@ body {
   grid-gap: 0 5px;
   padding: 2em 1em;
 }
- .leftClmn {
+.leftClmn {
   grid-area: leftClmn;
   height: auto;
   font-size: 0.8em;
  }
 
- .mainContent {
+#menu {
+  padding: 1em;
+} 
+
+.mainContent {
    display: grid;
    grid-area: mainContent;
    grid-template-columns: 1fr 1fr 1fr;
@@ -45,15 +63,12 @@ body {
    padding: 1em;
  }
 
- .photo {
+.photo {
    position: relative;
    max-width: 100%;
    max-height: 100%;
-   background-color: gold;
+   background-color: #8A7992;
  }
-
-
-
 
 .footer {
   display: grid;
@@ -62,7 +77,144 @@ body {
   width: 100%;
   position: fixed;
   bottom:0;
-  height: 3.5em;
+  height: 6em;
   background-color: #1F294C;
   color: #F8F6F3;
+}
+
+.bigPhoto {
+  max-width: 40em;
+}
+
+.eventFormat {
+  font-size: 1.5em;
+  padding: 0 0 0.7em 0;
+}
+
+.eventDate {
+  font-size: 1em;
+  padding: 0 0 0.7em 0;
+  font-weight: bold;
+}
+
+#deleteEventBtn {
+  padding: 0.2em;
+  background-color:#76C4E2;
+  color:#ffffff;
+  cursor:pointer;
+  border-radius:25px;
+  font-family:Arial;
+	border:1px solid #76C4E2;
+  text-shadow:0px 1px 0px #76C4E2;
+  border:1px solid #1F8FED;
+}
+
+#addPicture {
+  margin: 0.3em;
+  padding: 0.2em;
+  background-color:#76C4E2;
+  color:#ffffff;
+  cursor:pointer;
+  border-radius:25px;
+  font-family:Arial;
+	border:1px solid #76C4E2;
+  text-shadow:0px 1px 0px #76C4E2;
+  border:1px solid #1F8FED;
+}
+
+.chooseEventFormat {
+  margin: 0.6em 0;
+}
+
+.eventName {
+  font-size: 2.5em;
+  padding: 0.7em 0;
+}
+
+.eventContent {
+  max-width: 50em;
+  padding-right: 5em;
+}
+
+.eventInfo {
+  text-align: justify;
+}
+
+#btnAddEvent, #btnRegist {
+  background-color:#76C4E2;
+	border-radius:25px;
+	border:1px solid #76C4E2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:10px 20px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #76C4E2;
+  margin: 15px 3px; 
+  }
+
+  .trademark{
+    font-size: 1em;
+    padding: 15px 15px; 
+    font-weight: bold;
+  }
+
+  .adress{
+    font-size: 1em;
+    padding-top: 15px;
+    font-weight: bold;
+  }
+  /*CRUD sidan*/
+
+  .wrapperCrud {
+    padding-left: 5em;
+  }
+  
+  .textToAdmin {
+    font-size: 1.5em;
+    padding-top: 3em;
+    padding-left: 1em;
+    color: #1F294C;
+    font-weight: bold;
+  }
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 20em; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
