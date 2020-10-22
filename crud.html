@@ -40,17 +40,23 @@
     <input type="text" id="eventName" name="eventName"><br>
 
     <label for="eventDate">Add event's date:</label><br>
-    <input type="date"> <br>
-
-    <label for="eventFormat">Choose event's format:</label><br> 
-    <input type="radio"><br>
+    <input type="date"> <br> 
+    
+    <form class="chooseEventFormat">
+      <label for="eventFormat">Choose event's format:</label><br>
+      <input type="radio" id="Conference" name="events">
+      <label for="Conference">Conference</label><br>
+      <input type="radio" id="Class" name="events">
+      <label for="Class">Class</label><br>
+      <input type="radio" id="Networking" name="events">
+      <label for="Networking">Networking</label><br>
+    </form>
 
     <label for="addPicture">Choose a picture for the event:</label><br>
     <button id="addPicture">Add picture</button><br>
 
     <label for="eventInfo">Add event's information:</label><br>
-    <textarea id="eventInfo" name="eventInfo" >
-    Enter text here...</textarea><br>
+    <textarea id="eventInfo" name="eventInfo" placeholder="Enter text here..."></textarea><br>
 
     
     <button id="btnAddEvent">Add new event</button><br> 
