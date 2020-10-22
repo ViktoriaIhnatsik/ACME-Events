@@ -13,12 +13,40 @@ body {
    "footer";
 }
 
-.header {
-  display: grid;
-  grid-area: header;
-  justify-items: center;
-  font-size: 1.2em;
-  background-color: #1F8FED;
+/* Navbar */
+#navbar {
+  /* display: grid;
+  grid-area: header; */
+  background: #1F8FED;
+  color: #1F294C;
+  overflow: auto;
+}
+
+#navbar a {
+  color: #1F294C;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.7em;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+  background: #76C4E2;
 }
 
 .headerLogo {
@@ -27,6 +55,7 @@ body {
   margin-top: -20px;
 }
 
+/* Wrapper */
 .deskFindEvents {
   margin-top: 45px;
 }
