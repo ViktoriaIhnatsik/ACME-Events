@@ -75,7 +75,7 @@ body {
   grid-area: footer;
   grid-template-columns: 30% 70%;
   width: 100%;
-  position: fixed;
+  position: relative;
   bottom:0;
   height: 6em;
   background-color: #1F294C;
@@ -217,4 +217,26 @@ body {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*About Us*/ 
+.aboutUs {
+  font-size: 1.2em;
+  text-align: center;
+  color: #1F294C;
+} 
+.infoScrum{
+  float: left;;
+  max-width: 50%;
+  padding-bottom: 3em;
+  padding-left: 1.5em;
+}
+
+.photoScrum{
+  position: relative;
+  max-width: 40%;
+  float: right;
+  padding-right: 2em;
+  padding-top: 1em;
+
 }
