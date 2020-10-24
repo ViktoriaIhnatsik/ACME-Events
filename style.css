@@ -237,7 +237,9 @@ body {
 
 /*About Us*/ 
 .aboutUs {
-  font-size: 1.2em;
+  margin-top: 2em;
+  margin-left: 3em;
+  font-size: 1em;
   text-align: center;
   color: #1F294C;
   min-width: 700px;
@@ -247,6 +249,7 @@ body {
   max-width: 50%;
   padding-bottom: 3em;
   padding-left: 1.5em;
+  text-align: justify;
 }
 
 .photoScrum{
