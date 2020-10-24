@@ -28,45 +28,58 @@
   <section class="wrapper">
     <div class="leftClmn">
       <div class="deskFindEvents">
-        <h3>Find Events</h3>
+        <h3 id='findEvents'>Find Events</h3>
       </div>
+
       <div class="filterEvents">
-        <h3>Filters:</h3>
+        <h3 id="titelleFilters">Filters:</h3>
+
+        <input type="checkbox"  class="filter" name="filter" id="allEvents">
+        <input type="checkbox"  class="filter" name="filter" id="upcomEvents">
+        <label class="label" for="allEvents" id="lblAllEvents">All Events</label>
+        <label class="label" for="upcomEvents" id="lblUpcomEvents">Upcoming events</label>
+
         <ul id="menu">
-          <li class="menu-items">
-            <a id="date">Date</a>
+
+          <li class="menu-item">
+            <a id="date">Date:</a>
             <ul class="sub-menu">
               <li>
-                <a>October</a>
+                <input type="checkbox"  class="filter" name="filter" id="october">
+                <label class="label" for="october" id="lblOctober">October</label>
               </li>
               <li>
-                <a>November</a>
+                <input type="checkbox"  class="filter" name="filter" id="november">
+                <label class="label" for="november" id="lblNovember">November</label>
               </li>
               <li>
-                <a>December</a>
+                <input type="checkbox"  class="filter" name="filter" id="december">
+                <label class="label" for="december" id="lblDecember">December</label>
               </li>
             </ul>
           </li>
 
           <li class="menu-item">
-            <a>Format</a>
+            <a id="format">Format:</a>
             <ul class="sub-menu">
               <li>
-                <a>Conference</a>
+                <input type="checkbox"  class= "filter" name="filter" id="conference">
+                <label class="label" for="conference" id="lblConference">Conference</label>
               </li>
               <li>
-                <a>Class</a>
+                <input type="checkbox"  class= "filter" name="filter" id="class">
+                <label class="label" for="class" id="lblClass">Class</label>
               </li>
               <li>
-                <a>Networking</a>
+                <input type="checkbox"  class= "filter" name="filter" id="networking">
+                <label class="label" for="networking" id="lblNetworking">Networking</label>
               </li>
             </ul>
-
           </li>
-
+        </ul>
+        <button id="btnFilters">Find</button><br> 
       </div>
     </div>
-    </ul>
 
     <div class="mainContent">
       <div class="photo" id="p1" data-title="The world’s largest API Integration hackathon.">
