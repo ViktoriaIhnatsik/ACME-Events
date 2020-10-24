@@ -6,11 +6,12 @@ body {
   margin: 0;
   padding-bottom: 0;
   display: grid;
-  grid-template-rows: [row1] 5em [row2] 3fr [row3] 4em;
+  grid-template-rows: [row1] 5em [row2] 3em [row3] 3fr [row4] 4em;
   grid-template-areas:
-   "header"
-   "wrapper"
-   "footer";
+  "header"
+  "titllePopular"
+  "wrapper"
+  "footer";
 }
 
 /* Navbar */
@@ -55,6 +56,16 @@ body {
   margin-top: -20px;
 }
 
+/*titllePopular*/
+.titllePopular {
+  display: grid;
+  grid-area: titllePopular;
+  justify-items: start;
+  font-size: 1.7em;
+  padding-left: 28%;
+  color: #1F294C;
+}
+
 /* Wrapper */
 .deskFindEvents {
   margin-top: 45px;
@@ -96,7 +107,7 @@ body {
    position: relative;
    max-width: 100%;
    max-height: 100%;
-   background-color: #8A7992;
+   /* background-color: #8A7992; */
  }
 
 .footer {
