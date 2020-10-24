@@ -75,8 +75,8 @@ body {
   grid-area: footer;
   grid-template-columns: 30% 70%;
   width: 100%;
-  position: relative;
-  bottom:0;
+  position: fixed;
+  bottom: 0;
   height: 6em;
   background-color: #1F294C;
   color: #F8F6F3;
