@@ -85,7 +85,7 @@ body {
   font-size: 0.8em;
   margin-top: 1.3em;
   margin-left: 2em;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.8em;
   min-width: 15em;
  }
 
@@ -103,7 +103,7 @@ body {
 #findEvents {
   font-size: 1.7em;
   margin-top: 0em;
-  padding-left: 20%; 
+  padding-left: 15%; 
   padding-top: 0.5em;
   height: 2em;
 }
@@ -112,6 +112,8 @@ body {
   margin-left: 15%;
   font-size: 1.4em;
   color:#1F8FED;
+  margin-top: 0.3em;
+  margin-bottom: 0;
 }
 
  input.filter {
