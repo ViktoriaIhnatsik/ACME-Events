@@ -211,9 +211,10 @@ body {
   font-size: 1.2em;
   text-align: center;
   color: #1F294C;
+  min-width: 700px;
 } 
 .infoScrum{
-  float: left;;
+  float: left;
   max-width: 50%;
   padding-bottom: 3em;
   padding-left: 1.5em;
@@ -222,8 +223,8 @@ body {
 .photoScrum{
   position: relative;
   max-width: 40%;
+  min-width: 10em;
   float: right;
   padding-right: 2em;
   padding-top: 1em;
-
 }
