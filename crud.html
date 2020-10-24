@@ -35,32 +35,33 @@
       </div>
     </div>
 
-    <div class="addEvent"></div>
-    <h2>If you want to add a new event fill form:</h2>
-    <label for="eventName">Add event's title:</label><br>
-    <input type="text" id="eventName" name="eventName"><br>
-
-    <label for="eventDate">Add event's date:</label><br>
-    <input type="date"> <br> 
+    <div class="addEvent">
+      <h2>If you want to add a new event fill form:</h2>
+      <label for="eventName">Add event's title:</label><br>
+      <input type="text" id="eventName" name="eventName"><br>
+  
+      <label for="eventDate">Add event's date:</label><br>
+      <input type="date"> <br> 
+      
+      <form class="chooseEventFormat">
+        <label for="eventFormat">Choose event's format:</label><br>
+        <input type="radio" id="Conference" name="events">
+        <label for="Conference">Conference</label><br>
+        <input type="radio" id="Class" name="events">
+        <label for="Class">Class</label><br>
+        <input type="radio" id="Networking" name="events">
+        <label for="Networking">Networking</label><br>
+      </form>
+  
+      <label for="addPicture">Choose a picture for the event:</label><br><br>
+      <button id="addPicture">Add picture</button><br><br>
+  
+      <label for="eventInfo">Add event's information:</label><br>
+      <textarea id="eventInfo" name="eventInfo" placeholder="Enter text here..."></textarea><br>
+  
+      <button id="btnAddEvent">Add new event</button><br> 
+    </div>
     
-    <form class="chooseEventFormat">
-      <label for="eventFormat">Choose event's format:</label><br>
-      <input type="radio" id="Conference" name="events">
-      <label for="Conference">Conference</label><br>
-      <input type="radio" id="Class" name="events">
-      <label for="Class">Class</label><br>
-      <input type="radio" id="Networking" name="events">
-      <label for="Networking">Networking</label><br>
-    </form>
-
-    <label for="addPicture">Choose a picture for the event:</label><br>
-    <button id="addPicture">Add picture</button><br>
-
-    <label for="eventInfo">Add event's information:</label><br>
-    <textarea id="eventInfo" name="eventInfo" placeholder="Enter text here..."></textarea><br>
-
-    
-    <button id="btnAddEvent">Add new event</button><br> 
   
   </section>
 
