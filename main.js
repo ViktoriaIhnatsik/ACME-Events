@@ -1,4 +1,31 @@
-// Get the modal
+class Database {
+  readDataFromStorage () {
+    const stringData =  window.localStorage.getItem('Events');
+    if (!stringData) {
+      return [];
+    }
+    const data = JSON.parse(stringData);
+    return data;
+  }
+
+  saveDataToStorage(data) {
+    const stringData = JSON.stringify(data);
+    return window.localStorage.setItem('Events', stringData);
+  }
+
+  addEvent (event) {
+    const events = readDataFromStorage();
+    events.push(event);
+    saveDataToStorage(events);
+  }
+
+  removeEvent (id) {
+    const events = readDataFromStorage();
+    let newEvents = events.filter((event) => (event.id !== id));
+    saveDateToStorage(newEvents);
+  }
+}
+/* // Get the modal
 var modal = document.getElementById("openModal");
 
 // Get the button that opens the modal
@@ -22,4 +49,4 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+} */

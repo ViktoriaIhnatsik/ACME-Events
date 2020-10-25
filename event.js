@@ -1,3 +1,17 @@
+class Event {
+  constructor() {
+    this.eventName = null;
+    this.eventDate = null;
+    this.eventFormat = null;
+    this.eventPicture = null;
+    this.eventInfo = null;
+    this.eventId = null; //string ?
+  }
+}
+
+
+
+
 /*
 
 MENU:
