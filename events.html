@@ -25,32 +25,66 @@
     </nav>
   </header>
 
+  <h2 class="titlleEventsPage"></h2> <!-- TODO: in Js f - change name to depend on filter's  -->
+
   <section class="wrapper">
-    <div class="leftClmn">
+    <div class="leftClmn filterClmn">
+      <div class="deskFindEvents">
+        <h3 id='findEvents'>Find Events</h3>
+      </div>
+
+      <div class="filterEvents">
+        <h3 id="titelleFilters">Filters:</h3>
+
+        <input type="checkbox"  class="filter" name="filter" id="allEvents">
+        <input type="checkbox"  class="filter" name="filter" id="upcomEvents">
+        <label class="label" for="allEvents" id="lblAllEvents">All Events</label>
+        <label class="label" for="upcomEvents" id="lblUpcomEvents">Upcoming events</label>
+
+        <ul id="menu">
+
+          <li class="menu-item">
+            <a id="date">Date:</a>
+            <ul class="sub-menu">
+              <li>
+                <input type="checkbox"  class="filter" name="filter" id="october">
+                <label class="label" for="october" id="lblOctober">October</label>
+              </li>
+              <li>
+                <input type="checkbox"  class="filter" name="filter" id="november">
+                <label class="label" for="november" id="lblNovember">November</label>
+              </li>
+              <li>
+                <input type="checkbox"  class="filter" name="filter" id="december">
+                <label class="label" for="december" id="lblDecember">December</label>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-item">
+            <a id="format">Format:</a>
+            <ul class="sub-menu">
+              <li>
+                <input type="checkbox"  class= "filter" name="filter" id="conference">
+                <label class="label" for="conference" id="lblConference">Conference</label>
+              </li>
+              <li>
+                <input type="checkbox"  class= "filter" name="filter" id="class">
+                <label class="label" for="class" id="lblClass">Class</label>
+              </li>
+              <li>
+                <input type="checkbox"  class= "filter" name="filter" id="networking">
+                <label class="label" for="networking" id="lblNetworking">Networking</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button id="btnFilters">Find</button><br> 
+      </div>
     </div>
-    </ul>
 
-    <div class="eventContent">
-      <div class="bigPhoto" id="p1" data-title="The world’s largest API Integration hackathon.">
-        <img class="photo" src="images/confHacaton .png">
-      </div>
-      <div class="eventFormat">
-        Conference
-      </div>
-    
-      <div class="eventName" id="text1">
-        "The world’s largest API Integration hackathon."
-      </div>
-      <div class="eventDate" id="date1">
-        November
-      </div>
-      <div class="eventInfo" id='info1'>
-        "API World is produced and owned by DevNetwork, the world's developer event community and producer of leading conferences for the developer, engineering & IT industries.
-        By registering for this event, you are opting into DevNetwork email updates and one-time email-based promotions from top-level API World 2020 sponsors including exclusive invitations to API World 2020 parties and partner events. These updates will notify you about API World 2020 news, as well as announcements about DevNetwork events and services. You can opt out of DevNetwork email updates at any time."
-      </div>
-      <button type="button" id="btnRegist"> Register event </button>
-
-
+    <div class="mainContent">
+      
     </div>
   </section>
 
