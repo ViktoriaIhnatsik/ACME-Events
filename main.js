@@ -1,6 +1,7 @@
 class Database {
-  readDataFromStorage () {
-    const stringData =  window.localStorage.getItem('Events');
+
+  readDataFromStorage() {
+    const stringData = window.localStorage.getItem('Events');
     if (!stringData) {
       return [];
     }
@@ -13,18 +14,21 @@ class Database {
     return window.localStorage.setItem('Events', stringData);
   }
 
-  addEvent (event) {
-    const events = readDataFromStorage();
-    events.push(event);
-    saveDataToStorage(events);
+  removeEvent(id) {
+    const events = this.readDataFromStorage(); 
+    let newEvents = events.filter((event) => (event.id !== id));
+    this.saveDataToStorage(newEvents);           
   }
 
-  removeEvent (id) {
-    const events = readDataFromStorage();
-    let newEvents = events.filter((event) => (event.id !== id));
-    saveDateToStorage(newEvents);
+  addEvent(event) {
+    const events = this.readDataFromStorage();
+    events.push(event);                  
+    this.saveDataToStorage(events);           
   }
 }
+
+const database = new Database();
+
 /* // Get the modal
 var modal = document.getElementById("openModal");
 
