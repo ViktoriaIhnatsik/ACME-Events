@@ -40,32 +40,60 @@ function submitFormToCreate() {
 }
 
 function getEventsTable () {
+
+  let events = database.readDataFromStorage();
+  
   let divDeleteEvent = document.getElementById('divDeleteEvent');
   let tableEventToDelete = document.createElement('table');
   tableEventToDelete.id = 'tableEventToDelete';
   divDeleteEvent.appendChild(tableEventToDelete);
   
-  let trTableETD = document.createElement('tr');
-  trTableETD.id = 'trTableETD';
-  tableEventToDelete.appendChild(trTableETD);
+  let tr1TableETD = document.createElement('tr');
+  tr1TableETD.id = 'tr1TableETD';
+  tableEventToDelete.appendChild(tr1TableETD);
   
   let numThTableETD = document.createElement('th');
   numThTableETD.id = 'numThTableETD';
-  trTableETD.appendChild(numThTableETD);
+  tr1TableETD.appendChild(numThTableETD);
 
   let idThTableETD = document.createElement('th');
   idThTableETD.id = 'idThTableETD';
   idThTableETD.innerHTML = 'Id';
-  trTableETD.appendChild(idThTableETD);
+  tr1TableETD.appendChild(idThTableETD);
 
   let dateThTableETD = document.createElement('th');
   dateThTableETD.id = 'dateThTableETD';
   dateThTableETD.innerHTML = 'Date';
-  trTableETD.appendChild(dateThTableETD);
+  tr1TableETD.appendChild(dateThTableETD);
 
   let nameThTableETD = document.createElement('th');
   nameThTableETD.id = 'nameThTableETD';
   nameThTableETD.innerHTML = 'Name';
-  trTableETD.appendChild(nameThTableETD);
+  tr1TableETD.appendChild(nameThTableETD);
 
+
+  events.forEach((item) => {              //  skapa en rad för varje event från Events array
+    let trTableETD = document.createElement('tr');
+    trTableETD.id = 'trTableETD'+ item.id;
+    tableEventToDelete.appendChild(trTableETD);
+    
+    let numTdTableETD = document.createElement('td'); // if we want count events TODO - !
+    numTdTableETD.id = 'numThTableETD'+ item.id;
+    trTableETD.appendChild(numTdTableETD);
+
+    let idTdTableETD = document.createElement('td');
+    idTdTableETD.id = 'idThTableETD'+ item.id;
+    idTdTableETD.innerHTML = item.id;
+    trTableETD.appendChild(idTdTableETD);
+
+    let dateTdTableETD = document.createElement('td');
+    dateTdTableETD.id = 'dateThTableETD'+ item.id;
+    dateTdTableETD.innerHTML = item.date;
+    trTableETD.appendChild(dateTdTableETD);
+
+    let nameTdTableETD = document.createElement('td');
+    nameTdTableETD.id = 'nameThTableETD'+ item.id;
+    nameTdTableETD.innerHTML = item.name;
+    trTableETD.appendChild(nameTdTableETD);
+  });
 }

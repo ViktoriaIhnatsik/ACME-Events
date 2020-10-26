@@ -384,6 +384,14 @@ button:hover {
   cursor: pointer;
 }
 
+hr {
+  border: none; 
+  background-color: #1F8FED; 
+  height: 2px; /* Толщина линии */
+  width: 30em;
+  margin-left: 0;
+ }
+
 /*About Us*/ 
 .aboutUs {
   margin-top: 2em;
