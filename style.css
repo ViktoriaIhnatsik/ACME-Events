@@ -178,21 +178,38 @@ ul {
 }
 
 #btnFilters {
-  background-color:#1F8FED;;
-	border-radius:25px;
-	border:1px solid #1F8FED;;
+  box-shadow: 3px 4px 0px 0px #104d80;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#1F8FED;
+	border-radius:15px;
+  border:1px solid #4e95d8;
+  text-shadow:0px 1px 0px #528ecc;
 	display:inline-block;
 	cursor:pointer;
-	font-family:Arial;
-	font-size:15px;
-	padding: 10px 20px;
-	text-decoration:none;
-  text-shadow:0px 1px 0px #1F8FED;;
+  font-family:Arial;
+  text-decoration:none;
+	font-size:17px;
+	padding:7px 25px;
   margin: 15px 3px; 
-  margin-left: 2em;
+  margin-left: 3em;
   }
 
-  #btnFilters:hover {
+  #btnFilters:hover, #deleteEventBtn:hover, #addPicture:hover, #btnAddEvent:hover, #btnRegist:hover{
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
+    color:white;
+  }
+  button:active {
+    position:relative;
+    top:1px;
+    color:#ffffff;
+  }
+
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover {
     color:white;
   }
 
@@ -219,7 +236,8 @@ ul {
   z-index: 1; 
   background: rgba(39, 39, 48, 0.8); 
   font-size: 1rem; 
-  padding: 0.9vw 0.5vw; 
+  padding: 1.5vw 0.5vw;
+  margin-bottom: 0;
   color: rgb(255, 255, 255);
 }
 
@@ -253,15 +271,21 @@ ul {
 #deleteEventBtn, #addPicture  {
   margin-left: 0.5em;
   padding: 0.7em;
-  background-color:#76C4E2;
-  color:#ffffff;
-  cursor:pointer;
-  border-radius:25px;
+  box-shadow: 3px 4px 0px 0px #104d80;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#1F8FED;
+	border-radius:15px;
+  border:1px solid #337bc4;
+  text-shadow:0px 1px 0px #63a9f0;
+	display:inline-block;
+	cursor:pointer;
   font-family:Arial;
-	border:1px solid #76C4E2;
-  text-shadow:0px 1px 0px #76C4E2;
+  text-decoration:none;
 }
+button:hover {
+  border-color: rgba(255,255,255,1);
 
+}
 .chooseEventFormat {
   margin: 0.6em 0;
 }
@@ -281,17 +305,18 @@ ul {
 }
 
 #btnAddEvent, #btnRegist {
-  background-color:#76C4E2;
-	border-radius:25px;
-	border:1px solid #76C4E2;
+  box-shadow: 3px 4px 0px 0px #104d80;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#1F8FED;
+	border-radius:15px;
+  border:1px solid #337bc4;
+  text-shadow:0px 1px 0px #528ecc;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
+  font-family:Arial;
+  text-decoration:none;
 	padding:10px 20px;
 	text-decoration:none;
-  text-shadow:0px 1px 0px #76C4E2;
   margin: 15px 3px; 
   }
 
