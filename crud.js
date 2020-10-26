@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   btnAddEvent.addEventListener('click', () => { 
     submitFormToCreate();
   });
+
+  getEventsTable ();
 });
 
 function submitFormToCreate() {
@@ -35,4 +37,32 @@ function submitFormToCreate() {
 
   console.log(event); //TEST
   database.addEvent(event);
+}
+
+function getEventsTable () {
+  let tableEventToDelete = document.createElement('table');
+  tableEventToDelete.id = 'tableEventToDelete';
+  
+  let trTableETD = document.createElement('tr');
+  trTableETD.id = 'trTableETD';
+  tableEventToDelete.appendChild(trTableETD);
+  
+  let numThTableETD = document.createElement('th');
+  thTableETD.id = 'numThTableETD';
+  trTableETD.appendChild(thTableETD);
+
+  let idThTableETD = document.createElement('th');
+  thTableETD.id = 'idThTableETD';
+  trTableETD.appendChild(thTableETD);
+
+  let dateThTableETD = document.createElement('th');
+  thTableETD.id = 'dateThTableETD';
+  trTableETD.appendChild(thTableETD);
+
+  let nameThTableETD = document.createElement('th');
+  thTableETD.id = 'nameThTableETD';
+  trTableETD.appendChild(thTableETD);
+
+
+  
 }
