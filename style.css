@@ -217,9 +217,9 @@ ul {
   position: absolute; 
   left: 0; top: 50%; 
   z-index: 1; 
-  background: rgba(85, 84, 84, 0.6); 
+  background: rgba(39, 39, 48, 0.8); 
   font-size: 1rem; 
-  padding: 0.5vw 0.5vw; 
+  padding: 0.9vw 0.5vw; 
   color: rgb(255, 255, 255);
 }
 
