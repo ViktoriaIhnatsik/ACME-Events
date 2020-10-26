@@ -39,30 +39,33 @@ function submitFormToCreate() {
   database.addEvent(event);
 }
 
-let divDeleteEvent = document.getElementById('divDeleteEvent');
-let tableEventToDelete = document.createElement('table');
-tableEventToDelete.id = 'tableEventToDelete';
-divDeleteEvent.appendChild(tableEventToDelete);
+function getEventsTable () {
+  let divDeleteEvent = document.getElementById('divDeleteEvent');
+  let tableEventToDelete = document.createElement('table');
+  tableEventToDelete.id = 'tableEventToDelete';
+  divDeleteEvent.appendChild(tableEventToDelete);
+  
+  let trTableETD = document.createElement('tr');
+  trTableETD.id = 'trTableETD';
+  tableEventToDelete.appendChild(trTableETD);
+  
+  let numThTableETD = document.createElement('th');
+  numThTableETD.id = 'numThTableETD';
+  trTableETD.appendChild(numThTableETD);
 
-let trTableETD = document.createElement('tr');
-trTableETD.id = 'trTableETD';
-tableEventToDelete.appendChild(trTableETD);
+  let idThTableETD = document.createElement('th');
+  idThTableETD.id = 'idThTableETD';
+  idThTableETD.innerHTML = 'Id';
+  trTableETD.appendChild(idThTableETD);
 
-let numThTableETD = document.createElement('th');
-numThTableETD.id = 'numThTableETD';
-trTableETD.appendChild(numThTableETD);
+  let dateThTableETD = document.createElement('th');
+  dateThTableETD.id = 'dateThTableETD';
+  dateThTableETD.innerHTML = 'Date';
+  trTableETD.appendChild(dateThTableETD);
 
-let idThTableETD = document.createElement('th');
-idThTableETD.id = 'idThTableETD';
-idThTableETD.innerHTML = 'Id';
-trTableETD.appendChild(idThTableETD);
+  let nameThTableETD = document.createElement('th');
+  nameThTableETD.id = 'nameThTableETD';
+  nameThTableETD.innerHTML = 'Name';
+  trTableETD.appendChild(nameThTableETD);
 
-let dateThTableETD = document.createElement('th');
-dateThTableETD.id = 'dateThTableETD';
-dateThTableETD.innerHTML = 'Date';
-trTableETD.appendChild(dateThTableETD);
-
-let nameThTableETD = document.createElement('th');
-nameThTableETD.id = 'nameThTableETD';
-nameThTableETD.innerHTML = 'Name';
-trTableETD.appendChild(nameThTableETD);
+}
