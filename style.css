@@ -212,6 +212,17 @@ ul {
    /* background-color: #8A7992; */
  }
 
+ .photo:hover::after { /* photo text with event's name */
+  content: attr(data-title);
+  position: absolute; 
+  left: 0; top: 50%; 
+  z-index: 1; 
+  background: rgba(85, 84, 84, 0.6); 
+  font-size: 1rem; 
+  padding: 1vw 0.8vw; 
+  color: rgb(255, 255, 255);
+}
+
 .footer {
   display: grid;
   grid-area: footer;
