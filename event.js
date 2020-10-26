@@ -1,11 +1,12 @@
 class Event {
-  constructor() {
-    this.eventName = null;
-    this.eventDate = null;
-    this.eventFormat = null;
-    this.eventPicture = null;
-    this.eventInfo = null;
-    this.eventId = null; //string ?
+  constructor(id, name, date, format, info) {
+    this.id = id;
+    this.name = name;
+    this.date = date;
+    this.format = format;
+    /* this.eventPicture = data.picture; */
+    this.info = info;
+  
   }
 }
 
