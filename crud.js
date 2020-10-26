@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     submitFormToCreate();
   });
 
-  getEventsTable ();
+  getEventsTable();
 });
 
 function submitFormToCreate() {
@@ -40,29 +40,29 @@ function submitFormToCreate() {
 }
 
 function getEventsTable () {
+  let divDeleteEvent = document.getElementById('divDeleteEvent');
   let tableEventToDelete = document.createElement('table');
   tableEventToDelete.id = 'tableEventToDelete';
+  divDeleteEvent.appendChild(tableEventToDelete);
   
   let trTableETD = document.createElement('tr');
   trTableETD.id = 'trTableETD';
   tableEventToDelete.appendChild(trTableETD);
   
   let numThTableETD = document.createElement('th');
-  thTableETD.id = 'numThTableETD';
-  trTableETD.appendChild(thTableETD);
+  numThTableETD.id = 'numThTableETD';
+  trTableETD.appendChild(numThTableETD);
 
   let idThTableETD = document.createElement('th');
-  thTableETD.id = 'idThTableETD';
-  trTableETD.appendChild(thTableETD);
+  idThTableETD.id = 'idThTableETD';
+  trTableETD.appendChild(idThTableETD);
 
   let dateThTableETD = document.createElement('th');
-  thTableETD.id = 'dateThTableETD';
-  trTableETD.appendChild(thTableETD);
+  dateThTableETD.id = 'dateThTableETD';
+  trTableETD.appendChild(dateThTableETD);
 
   let nameThTableETD = document.createElement('th');
-  thTableETD.id = 'nameThTableETD';
-  trTableETD.appendChild(thTableETD);
+  nameThTableETD.id = 'nameThTableETD';
+  trTableETD.appendChild(nameThTableETD);
 
-
-  
 }
