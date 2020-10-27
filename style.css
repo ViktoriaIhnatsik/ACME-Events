@@ -458,3 +458,29 @@ hr {
   width: 100%;
   bottom: 0;
 }
+
+@media screen and (max-width: 1200px) {
+  .mainContent {
+    grid-template-columns: 1fr 1fr;
+  }
+  .aboutInfo > p {
+    font-size: 1.2em;
+    padding: 0.4em;
+    font-weight: bold;
+  }
+  #findEventsMP {
+    font-size: 1.6em;
+    padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+  .aboutInfo > p {
+    font-size: 1.0em;
+    padding: 0.3em;
+    font-weight: bold;
+  }
+}
