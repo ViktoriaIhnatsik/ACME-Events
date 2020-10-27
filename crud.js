@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const database = new Database();
   const btnAddEvent = document.getElementById('btnAddEvent');
 
   btnAddEvent.addEventListener('click', () => {
-    submitFormToCreate();
+    submitFormToCreate(database);
   });
 
-  showEventsTable();
+  showEventsTable(database);
 });
 
-function submitFormToCreate() {
+function submitFormToCreate(database) {
   let inpEventId = document.getElementById('eventId');
   let id = inpEventId.value;
   inpEventId.value = '';
@@ -37,14 +38,14 @@ function submitFormToCreate() {
   let info = eventInfo.value;
   eventInfo.value = '';
 
-  let event = new Event(id, name, date, format, info);
+  let event = new Event(id, name, date, format, info, "");
 
   console.log(event); //TEST
   database.addEvent(event);
-  showEventsTable();
+  showEventsTable(database);
 }
 
-function showEventsTable() {
+function showEventsTable(database) {
 
   let events = database.readDataFromStorage();
 
@@ -110,7 +111,7 @@ function showEventsTable() {
     trTableETD.appendChild(btnDeleteEvent);
     btnDeleteEvent.addEventListener('click', () => {
       database.removeEvent(item.id);
-      showEventsTable();
+      tableEventToDelete.removeChild(trTableETD);
     })
   }); 
 

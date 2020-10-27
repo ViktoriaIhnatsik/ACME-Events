@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const database = new Database();
+
   const btnFilters = document.getElementById('btnFilters');
   const lblAllEvents = document.getElementById('lblAllEvents');
   const lblUpcomEvents = document.getElementById('lblUpcomEvents');
@@ -11,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const lblClass = document.getElementById('lblClass');
   const lblNetworking = document.getElementById('lblNetworking');
 
-  getEventsTable();
+  getEventsTable(database);
 
-})
+});
 
-function getEventsTable() {
+function getEventsTable(database) {
 
   let events = database.readDataFromStorage();
 
