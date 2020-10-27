@@ -21,7 +21,7 @@ function getEventsTable() {
 
   let divEventsList = document.getElementById('divEventsList');
   let tableEventsList = document.createElement('table');
-  tableEvenstList.id = 'tableEventsList';
+  tableEventsList.id = 'tableEventsList';
   divEventsList.appendChild(tableEventsList);
 
   let tr1TableEventsL = document.createElement('tr');
@@ -30,8 +30,8 @@ function getEventsTable() {
 
   let dateThTableEventsL = document.createElement('th');
   dateThTableEventsL.id = 'dateTableEventsL';
-  dateTableEventsL.innerHTML = 'Date';
-  tr1TableEventsL.appendChild(dateTableEventsL);
+  dateThTableEventsL.innerHTML = 'Date';
+  tr1TableEventsL.appendChild(dateThTableEventsL);
 
   let formatThTableEventsL = document.createElement('th');
   formatThTableEventsL.id = 'formatThTableEventsL';
