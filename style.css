@@ -23,8 +23,6 @@ header {
 }
 /* Navbar */
 #navbar {
-  /* display: grid;
-  grid-area: header; */
   background: #1F8FED;
   color: #1F294C;
   overflow: auto;
@@ -124,7 +122,7 @@ header {
 }
 
  input.filter {
-  display: none
+  display: none;
 }
 
 .label {
@@ -149,6 +147,12 @@ header {
   display: flex;
 }
 
+.label > a {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
 #allEvents:checked ~ #lblAllEvents,
 #upcomEvents:checked ~ #lblUpcomEvents,
 #october:checked ~ #lblOctober,
@@ -165,7 +169,6 @@ header {
 .filterEvents .label:hover {
   display: flex;
   background-color: #1F8FED;
-
 }
 
 .menu-item label {
@@ -201,24 +204,24 @@ ul {
   margin-left: 3em;
   }
 
-  #btnFilters:hover, #deleteEventBtn:hover, #addPicture:hover, #btnAddEvent:hover, #btnRegist:hover{
-    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-    background-color:#378de5;
-    color:white;
-  }
-  button:active {
-    position:relative;
-    top:1px;
-    color:#ffffff;
-  }
+#btnFilters:hover, #deleteEventBtn:hover, #addPicture:hover, #btnAddEvent:hover, #btnRegist:hover{
+  background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color:#378de5;
+  color:white;
+}
+button:active {
+  position:relative;
+  top:1px;
+  color:#ffffff;
+}
 
-  button:focus {
-    outline: none;
-  }
-  
-  button:hover {
-    color:white;
-  }
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  color:white;
+}
 
 .mainContent {
    display: grid;
@@ -236,12 +239,12 @@ ul {
    /* background-color: #8A7992; */
  }
 
- .photo:hover::after { /* photo text with event's name */
+ .photo:hover::after {       /* photo text with event's name */
   content: attr(data-title);
   position: absolute; 
   left: 0; top: 50%; 
   z-index: 1; 
-  background: rgba(39, 39, 48, 0.8); 
+  background: rgba(48, 44, 39, 0.671); 
   font-size: 1rem; 
   padding: 1.5vw 0.5vw;
   margin-bottom: 0;

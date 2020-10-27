@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     submitFormToCreate();
   });
 
-  getEventsTable();
+  showEventsTable();
 });
 
 function submitFormToCreate() {
@@ -39,14 +39,16 @@ function submitFormToCreate() {
   database.addEvent(event);
 }
 
-function getEventsTable() {
+function showEventsTable() {
 
   let events = database.readDataFromStorage();
 
-  let divDeleteEvent = document.getElementById('divDeleteEvent');
+  let tableContainer = document.getElementById('tableContainer');
+  tableContainer.innerHTML = '';
+
   let tableEventToDelete = document.createElement('table');
   tableEventToDelete.id = 'tableEventToDelete';
-  divDeleteEvent.appendChild(tableEventToDelete);
+  tableContainer.appendChild(tableEventToDelete);
 
   let tr1TableETD = document.createElement('tr');
   tr1TableETD.id = 'tr1TableETD';
@@ -103,8 +105,8 @@ function getEventsTable() {
     trTableETD.appendChild(btnDeleteEvent);
     btnDeleteEvent.addEventListener('click', () => {
       database.removeEvent(item.id);
-      /// TODO    delete trTableETD = ?????
+      showEventsTable();
     })
-  });
+  }); 
 
 }
