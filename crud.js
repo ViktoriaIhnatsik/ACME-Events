@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const btnAddEvent = document.getElementById('btnAddEvent');
 
-  btnAddEvent.addEventListener('click', () => { 
+  btnAddEvent.addEventListener('click', () => {
     submitFormToCreate();
   });
 
@@ -29,7 +29,7 @@ function submitFormToCreate() {
   } else {
     format = 'networking';
   }
-  
+
   let eventInfo = document.getElementById('eventInfo');
   let info = eventInfo.value;
 
@@ -39,19 +39,19 @@ function submitFormToCreate() {
   database.addEvent(event);
 }
 
-function getEventsTable () {
+function getEventsTable() {
 
   let events = database.readDataFromStorage();
-  
+
   let divDeleteEvent = document.getElementById('divDeleteEvent');
   let tableEventToDelete = document.createElement('table');
   tableEventToDelete.id = 'tableEventToDelete';
   divDeleteEvent.appendChild(tableEventToDelete);
-  
+
   let tr1TableETD = document.createElement('tr');
   tr1TableETD.id = 'tr1TableETD';
   tableEventToDelete.appendChild(tr1TableETD);
-  
+
   let numThTableETD = document.createElement('th');
   numThTableETD.id = 'numThTableETD';
   tr1TableETD.appendChild(numThTableETD);
@@ -74,27 +74,36 @@ function getEventsTable () {
 
   events.forEach((item) => {              //  skapa en rad för varje event från Events array
     let trTableETD = document.createElement('tr');
-    trTableETD.id = 'trTableETD'+ item.id;
+    trTableETD.id = 'trTableETD' + item.id;
     tableEventToDelete.appendChild(trTableETD);
-    
+
     let numTdTableETD = document.createElement('td'); // if we want count events TODO - !
-    numTdTableETD.id = 'numThTableETD'+ item.id;
+    numTdTableETD.id = 'numThTableETD' + item.id;
     trTableETD.appendChild(numTdTableETD);
 
     let idTdTableETD = document.createElement('td');
-    idTdTableETD.id = 'idThTableETD'+ item.id;
+    idTdTableETD.id = 'idThTableETD' + item.id;
     idTdTableETD.innerHTML = item.id;
     trTableETD.appendChild(idTdTableETD);
 
     let dateTdTableETD = document.createElement('td');
-    dateTdTableETD.id = 'dateThTableETD'+ item.id;
+    dateTdTableETD.id = 'dateThTableETD' + item.id;
     dateTdTableETD.innerHTML = item.date;
     trTableETD.appendChild(dateTdTableETD);
 
     let nameTdTableETD = document.createElement('td');
-    nameTdTableETD.id = 'nameThTableETD'+ item.id;
+    nameTdTableETD.id = 'nameThTableETD' + item.id;
     nameTdTableETD.innerHTML = item.name;
     trTableETD.appendChild(nameTdTableETD);
-    // TODO Add buttons "delete"!
+    
+    //buttons "delete"!
+    let btnDeleteEvent = document.createElement('button');
+    btnDeleteEvent.id = 'btnDeleteEvent' + item.id;
+    btnDeleteEvent.innerHTML = 'Delete';
+    trTableETD.appendChild(btnDeleteEvent);
+
+    //btnDeleteEvent.addEventListener('click', onclickDelete);
+
+
   });
 }
