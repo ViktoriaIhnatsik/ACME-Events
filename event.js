@@ -1,12 +1,11 @@
 class Event {
-  constructor(id, name, date, format, info) {
+  constructor(id, name, date, format, img, info) {
     this.id = id;
     this.name = name;
     this.date = date;
     this.format = format;
-    /* this.eventPicture = data.picture; */
+    this.img = img;
     this.info = info;
-  
   }
 }
 

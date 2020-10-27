@@ -27,7 +27,7 @@ class Database {
   }
 }
 
-const database = new Database();
+
 
 /* // Get the modal
 var modal = document.getElementById("openModal");
