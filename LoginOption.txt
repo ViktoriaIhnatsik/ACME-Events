@@ -1,0 +1,20 @@
+let admins = [
+    {username: "Inna", password: "abc"},
+    {username: "Vik", password: "bcd"},
+    {username: "Mari", password: "cde"},
+    {username: "Nik", password: "def"}
+]
+
+function login(user, pass) {
+    for (let i = 0; i < admins.length; i++) {
+         if (admins[i].username == user && admins[i].password == pass) {
+              console.log("välkommen")
+              break;
+         } else {
+              console.log("Fel")
+              break;
+         }
+    }
+}
+login("Inna", "abc")
+login("Nik", "HEJ")
