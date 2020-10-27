@@ -446,3 +446,15 @@ hr {
   padding-right: 2em;
   padding-top: 1em;
 }
+
+.aboutInfo > p {
+  color: rgba(19, 2, 92, 0.884);
+  font-size: 1.3em;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.aboutInfo > img {
+  width: 100%;
+  bottom: 0;
+}
