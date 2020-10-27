@@ -101,9 +101,10 @@ function getEventsTable() {
     btnDeleteEvent.id = 'btnDeleteEvent' + item.id;
     btnDeleteEvent.innerHTML = 'Delete';
     trTableETD.appendChild(btnDeleteEvent);
-
-    //btnDeleteEvent.addEventListener('click', onclickDelete);
-
-
+    btnDeleteEvent.addEventListener('click', () => {
+      database.removeEvent(item.id);
+      /// TODO    delete trTableETD = ?????
+    })
   });
+
 }
