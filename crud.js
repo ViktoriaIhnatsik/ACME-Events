@@ -11,12 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
 function submitFormToCreate() {
   let inpEventId = document.getElementById('eventId');
   let id = inpEventId.value;
+  inpEventId.value = '';
 
   let inpEventName = document.getElementById('eventName');
   let name = inpEventName.value;
+  inpEventName.value = '';
 
   let inpEventDate = document.getElementById('eventDate');
   let date = inpEventDate.value;
+  inpEventDate.value = '';
 
   let eventConference = document.getElementById('eventConference');
   let eventClass = document.getElementById('eventClass');
@@ -32,11 +35,13 @@ function submitFormToCreate() {
 
   let eventInfo = document.getElementById('eventInfo');
   let info = eventInfo.value;
+  eventInfo.value = '';
 
   let event = new Event(id, name, date, format, info);
 
   console.log(event); //TEST
   database.addEvent(event);
+  showEventsTable();
 }
 
 function showEventsTable() {
