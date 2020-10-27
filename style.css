@@ -479,8 +479,16 @@ hr {
     grid-template-columns: 1fr;
   }
   .aboutInfo > p {
-    font-size: 1.0em;
     padding: 0.3em;
     font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .headerLogo {
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+    max-block-size: 8em;
   }
 }
