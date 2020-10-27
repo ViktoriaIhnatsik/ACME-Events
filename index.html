@@ -28,58 +28,36 @@
   <h2 class="slogan">Popular in ours Events:</h2>
 
   <section class="wrapper">
-    <div class="leftClmn filterClmn">
-      <div class="deskFindEvents">
-        <h3 id='findEvents'>Find Events</h3>
+    <div class="leftClmn filterClmnMP">
+      <div class="deskFindEventsMP">
+        <h3 id='findEventsMP'>Find Events</h3>
       </div>
 
-      <div class="filterEvents">
-        <h3 id="titelleFilters">Filters:</h3>
+      <div class="filterEventsMP">
 
-        <input type="checkbox"  class="filter" name="filter" id="allEvents">
-        <input type="checkbox"  class="filter" name="filter" id="upcomEvents">
-        <label class="label" for="allEvents" id="lblAllEvents"><a href="events.html">All Events</a></label>
-        <label class="label" for="upcomEvents" id="lblUpcomEvents">Upcoming events</label>
+        <input type="checkbox"  class="filterMP" name="filterMP" id="allEventsMP">
+        <input type="checkbox"  class="filterMP" name="filterMP" id="upcomEventsMP">
+        <label class="labelMP" for="allEventsMP" id="lblAllEventsMP"><a href="events.html">All Events</a></label>
+        <ul id="menuMP">
 
-        <ul id="menu">
-
-          <li class="menu-item">
-            <a id="date">Date:</a>
-            <ul class="sub-menu">
+          <li class="menu-itemMP">
+            <a id="formatMP">Format:</a>
+            <ul class="sub-menuMP">
               <li>
-                <input type="checkbox"  class="filter" name="filter" id="october">
-                <label class="label" for="october" id="lblOctober">October</label>
+                <input type="checkbox"  class="filterMP" name="filterMP" id="conferenceMP">
+                <label class="labelMP" for="conferenceMP" id="lblConferenceMP">Conference</label>
               </li>
               <li>
-                <input type="checkbox"  class="filter" name="filter" id="november">
-                <label class="label" for="november" id="lblNovember">November</label>
+                <input type="checkbox"  class="filterMP" name="filterMP" id="classMP">
+                <label class="labelMP" for="classMP" id="lblClassMP">Class</label>
               </li>
               <li>
-                <input type="checkbox"  class="filter" name="filter" id="december">
-                <label class="label" for="december" id="lblDecember">December</label>
-              </li>
-            </ul>
-          </li>
-
-          <li class="menu-item">
-            <a id="format">Format:</a>
-            <ul class="sub-menu">
-              <li>
-                <input type="checkbox"  class= "filter" name="filter" id="conference">
-                <label class="label" for="conference" id="lblConference">Conference</label>
-              </li>
-              <li>
-                <input type="checkbox"  class= "filter" name="filter" id="class">
-                <label class="label" for="class" id="lblClass">Class</label>
-              </li>
-              <li>
-                <input type="checkbox"  class= "filter" name="filter" id="networking">
-                <label class="label" for="networking" id="lblNetworking">Networking</label>
+                <input type="checkbox"  class="filterMP" name="filterMP" id="networkingMP">
+                <label class="labelMP" for="networkingMP" id="lblNetworkingMP">Networking</label>
               </li>
             </ul>
           </li>
         </ul>
-        <button id="btnFilters">Find</button><br> 
       </div>
     </div>
 
@@ -129,8 +107,6 @@
   <script src="main.js"></script>
   <script src="crud.js"></script>
   <script src="event.js"></script>
-  <script src="allEvents.js"></script>
-
 </body>
 
 </html>
