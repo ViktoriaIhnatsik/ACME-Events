@@ -1,3 +1,6 @@
+html, body {
+  min-height: 100%;
+}
 body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #F8F6F3;
@@ -6,14 +9,18 @@ body {
   margin: 0;
   padding-bottom: 0;
   display: grid;
-  grid-template-rows: [row1] 5em [row2] 3em [row3] 3fr [row4] 4em;
+  grid-template-rows: 4em 3em 3fr 3em;
   grid-template-areas:
   "header"
-  "titllePopular"
+  "slogan"
   "wrapper"
   "footer";
 }
 
+header {
+  display: grid;
+  grid-area: header;
+}
 /* Navbar */
 #navbar {
   /* display: grid;
@@ -41,7 +48,7 @@ body {
 
 #navbar ul li a {
   display: block;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   text-align: center;
 }
 
@@ -56,16 +63,16 @@ body {
   margin-top: -20px;
 }
 
-/*titllePopular*/
-.titllePopular {
+/*slogan*/
+.slogan {
   display: grid;
-  grid-area: titllePopular;
+  grid-area: slogan;
   justify-items: start;
   font-size: 1.7em;
-  padding-left: 28%;
+  padding-left: 15%;
   color: #1F294C;
   margin-left: 20%;
-  padding-top: 1em;
+  padding-top: 0.1em;
 }
 
 /* Wrapper */
@@ -241,16 +248,27 @@ ul {
   color: rgb(255, 255, 255);
 }
 
-.footer {
+footer {
   display: grid;
   grid-area: footer;
   grid-template-columns: 30% 70%;
   width: 100%;
+  max-height: 100%;
   position: fixed;
   bottom: 0;
-  height: 6em;
   background-color: #1F294C;
   color: #F8F6F3;
+}
+.trademark{
+  font-size: 0.7em;
+  padding: 10px 15px; 
+  /* font-weight: bold; */
+}
+
+.adress{
+  font-size: 0.7em;
+  padding-top: 15px;
+ /*  font-weight: bold; */
 }
 
 .bigPhoto {
@@ -320,32 +338,37 @@ button:hover {
   margin: 15px 3px; 
   }
 
-  .trademark{
-    font-size: 1em;
-    padding: 15px 15px; 
-    font-weight: bold;
-  }
-
-  .adress{
-    font-size: 1em;
-    padding-top: 15px;
-    font-weight: bold;
-  }
+  
   /*CRUD sidan*/
 
-  .wrapperCrud {
-    padding-left: 10em;
-  }
-  
-  .textToAdmin {
-    font-size: 1.5em;
-    padding-top: 2em;
-    padding-left: 1em;
-    color: #1F294C;
-    font-weight: bold;
+.wrapperCrud {
+  padding-left: 10em;
+  min-height: 100%;
+}
+ 
+h4 {
+  margin-top:0.7em;
+}
+
+hr {
+  border: none; 
+  background-color: #1F8FED; 
+  height: 2px; /* Толщина линии */
+  width: 30em;
+  margin: 0.2em;
   }
 
-  /* The Modal (background) */
+#eventId {
+    margin-top: 0;
+}
+
+#tableEventToDelete {
+  table-layout: auto;
+  width: 50em;
+  text-align: left;
+}
+
+  /* ==The Modal (background) ==*/
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -383,14 +406,6 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
-
-hr {
-  border: none; 
-  background-color: #1F8FED; 
-  height: 2px; /* Толщина линии */
-  width: 30em;
-  margin-left: 0;
- }
 
 /*About Us*/ 
 .aboutUs {

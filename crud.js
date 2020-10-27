@@ -95,5 +95,6 @@ function getEventsTable () {
     nameTdTableETD.id = 'nameThTableETD'+ item.id;
     nameTdTableETD.innerHTML = item.name;
     trTableETD.appendChild(nameTdTableETD);
+    // TODO Add buttons "delete"!
   });
 }
