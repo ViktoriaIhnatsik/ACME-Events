@@ -32,6 +32,9 @@ const popularEvents = [
       img.setAttribute('class', 'photo');
       img.setAttribute('src', item.img);
       eventDiv.appendChild(img);
+      img.addEventListener("click", function() {
+        document.location.href = 'eventTitell.html';
+      })
     });
   });
   
