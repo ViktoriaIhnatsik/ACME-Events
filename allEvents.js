@@ -1,27 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
   const database = new Database();
+  displayEvents();
 
+  const btnSort = document.getElementById('btnSort');
   const btnFilters = document.getElementById('btnFilters');
-  const lblAllEvents = document.getElementById('lblAllEvents');
-  const lblUpcomEvents = document.getElementById('lblUpcomEvents');
 
-  const lblOctober = document.getElementById('lblOctober');
-  const lblNovember = document.getElementById('lblNovember');
-  const lblDecember = document.getElementById('lblDecember');
+  let filterDate = document.getElementById('filterDate');
+  let fromDate = document.getElementById('fromDate');
+  let toDate = document.getElementById('toDate');
 
-  const lblConference = document.getElementById('lblConference');
-  const lblClass = document.getElementById('lblClass');
-  const lblNetworking = document.getElementById('lblNetworking');
+  filterDate.addEventListener('change', e => {
+    /*
+    if(e.target.checked){
+      fromDate.disabled = false;
+      toDate.disabled = false;
+    } else {
+      fromDate.disabled = true;
+      toDate.disabled = true;
+    }
+    */
+    fromDate.disabled = !e.target.checked;
+    toDate.disabled = !e.target.checked;
 
-  getEventsTable(database);
+  });
 
+
+  btnSort.addEventListener('click', () => {
+    updateSorting ();
+    
+    displayEvents();
+  });
+
+  btnFilters.addEventListener('click', () => {
+    updateFilters ();
+    displayEvents();
+  });
 });
 
-function getEventsTable(database) {
+let sorting;
+let filters;
 
+function displayEvents(database) {
+ 
   let events = database.readDataFromStorage();
 
   let divEventsList = document.getElementById('divEventsList');
+  divEventsList.innerHTML = '';
+
   let tableEventsList = document.createElement('table');
   tableEventsList.id = 'tableEventsList';
   divEventsList.appendChild(tableEventsList);
@@ -66,4 +91,43 @@ function getEventsTable(database) {
     nameTrTableEventsL.innerHTML = item.name;
     trTableEventsL.appendChild(nameTrTableEventsL);
   });
+}
+
+function updateSorting() {
+  let name = document.getElementById('byNames');
+  if (name.checked) {
+    sorting = 'byName';
+  } else {
+    sorting = 'byDate';
+  }
+  console.log(sorting); //TEST
+}
+
+function updateFilters() {
+  let filterDate = document.getElementById('filterDate');
+  let fromDate = document.getElementById('fromDate');
+  let toDate = document.getElementById('toDate');
+
+  let filterFormat = document.getElementById('filterFormat');
+  let filterConference = document.getElementById('filterConference');
+  let filterClass = document.getElementById('filterClass');
+  let filterNetworking = document.getElementById('filterNetworking');
+
+  
+
+  filters = {
+    date: {
+      enabled: filterDate.checked,
+      from: fromDate.value,
+      to: toDate.value
+    },
+    format: {
+      enabled: filterFormat.checked,
+      filterConference: filterConference.checked,
+      filterClass: filterClass.checked,
+      filterNetworking: filterNetworking.checked,
+    }
+  }
+  console.log(filters); //TEST
+
 }
