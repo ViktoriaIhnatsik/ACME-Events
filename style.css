@@ -314,6 +314,9 @@ footer {
   font-family:Arial;
   text-decoration:none;
 }
+#btnAddEvent {
+  margin-bottom: 2em;
+}
 button:hover {
   border-color: rgba(255,255,255,1);
 
