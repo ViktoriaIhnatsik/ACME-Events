@@ -113,8 +113,6 @@ function updateFilters() {
   let filterClass = document.getElementById('filterClass');
   let filterNetworking = document.getElementById('filterNetworking');
 
-  
-
   filters = {
     date: {
       enabled: filterDate.checked,
@@ -129,5 +127,4 @@ function updateFilters() {
     }
   }
   console.log(filters); //TEST
-
 }
