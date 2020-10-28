@@ -1,15 +1,16 @@
+const database = new Database();
+
 document.addEventListener("DOMContentLoaded", () => {
-  const database = new Database();
   const btnAddEvent = document.getElementById('btnAddEvent');
 
   btnAddEvent.addEventListener('click', () => {
-    submitFormToCreate(database);
+    submitFormToCreate();
   });
 
-  showEventsTable(database);
+  showEventsTable();
 });
 
-function submitFormToCreate(database) {
+function submitFormToCreate() {
   let inpEventId = document.getElementById('eventId');
   let id = inpEventId.value;
   inpEventId.value = '';
@@ -47,10 +48,10 @@ function submitFormToCreate(database) {
 
   console.log(event); //TEST
   database.addEvent(event);
-  showEventsTable(database);
+  showEventsTable();
 }
 
-function showEventsTable(database) {
+function showEventsTable() {
 
   let events = database.readDataFromStorage();
 

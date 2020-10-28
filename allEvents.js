@@ -1,6 +1,7 @@
+const database = new Database();
+
 document.addEventListener("DOMContentLoaded", () => {
-  const database = new Database();
-  displayEvents(database);
+  displayEvents();
 
   const btnSort = document.getElementById('btnSort');
   const btnFilters = document.getElementById('btnFilters');
@@ -28,19 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
   btnSort.addEventListener('click', () => {
     updateSorting ();
     
-    displayEvents(database);
+    displayEvents();
   });
 
   btnFilters.addEventListener('click', () => {
     updateFilters ();
-    displayEvents(database);
+    displayEvents();
   });
 });
 
 let sorting;
 let filters;
 
-function displayEvents(database) {
+function displayEvents() {
  
   let events = database.readDataFromStorage();
 
