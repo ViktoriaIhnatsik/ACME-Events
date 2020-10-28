@@ -36,7 +36,8 @@ function submitFormToCreate(database) {
 
   let eventSynops = document.getElementById('eventSynops');
   let synopsis = eventSynops.value;
-  eventSynops.value = '';
+  //eventSynops.value = '';
+  synopsis = ''; 
 
   let eventInfo = document.getElementById('eventInfo');
   let info = eventInfo.value;
