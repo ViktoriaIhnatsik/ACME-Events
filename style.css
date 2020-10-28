@@ -179,25 +179,11 @@ header {
   background-color: #1F8FED;
 } */
 
-.sortEvents label,
-.menu-item label, 
-.menu-itemMP label {
-  font-size: 1.1em;
-  font-weight: bold;
-  padding-left: 0.8em;
-  padding: 0.7em;
-}
-
 ul {
   list-style-type: none;
 }
 
-#date,
-#format,
-#formatMP {
-  color: #1F8FED;
-  font-weight: bold;
-}
+
 
 /* #btnFilters {
   box-shadow: 3px 4px 0px 0px #104d80;

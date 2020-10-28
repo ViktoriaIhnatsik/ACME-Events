@@ -38,12 +38,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-let sorting;
-let filters;
+// Default values for sorting and filters
+let sorting = 'byDate';
+let filters = {
+  date: {
+    enabled: false
+  },
+  format: {
+    enabled: false
+  }
+};
 
-function displayEvents() {
- 
+function displayEvents() { 
   let events = database.readDataFromStorage();
+
+  // Filter events using filters
+  if (filters.date.enabled) {
+    // Filter by date
+    // ...
+  }
+  if (filters.format.enabled) {
+    // Filter by format
+    // ...
+  }
+
+  // Sort events using sorting
+  if (sorting === 'byName') {
+    events.sort((a, b) => {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      if (nameA < nameB) { return -1; }
+      if (nameA > nameB) { return 1; }
+      return 0;
+    });
+  } else if (sorting === 'byDate') {
+    events.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateA - dateB;
+    });
+  }
 
   let divEventsList = document.getElementById('divEventsList');
   divEventsList.innerHTML = '';
@@ -95,7 +129,7 @@ function displayEvents() {
 }
 
 function updateSorting() {
-  let name = document.getElementById('byNames');
+  let name = document.getElementById('byName');
   if (name.checked) {
     sorting = 'byName';
   } else {
