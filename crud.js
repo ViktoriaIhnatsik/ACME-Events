@@ -43,7 +43,7 @@ function submitFormToCreate(database) {
   let info = eventInfo.value;
   eventInfo.value = '';
 
-  let event = new Event(id, name, date, format, synopsis, info/* , '' */);
+  let event = new Event(id, name, date, format, synopsis, info);
 
   console.log(event); //TEST
   database.addEvent(event);
