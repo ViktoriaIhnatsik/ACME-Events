@@ -34,11 +34,15 @@ function submitFormToCreate(database) {
     format = 'networking';
   }
 
+  let eventSynops = document.getElementById('eventSynops');
+  let synopsis = eventSynops.value;
+  eventSynops.value = '';
+
   let eventInfo = document.getElementById('eventInfo');
   let info = eventInfo.value;
   eventInfo.value = '';
 
-  let event = new Event(id, name, date, format, info, "");
+  let event = new Event(id, name, date, format, sinopsis, info, "");
 
   console.log(event); //TEST
   database.addEvent(event);
