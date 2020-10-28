@@ -38,11 +38,12 @@ function submitFormToCreate(database) {
   let synopsis = eventSynops.value;
   eventSynops.value = '';
 
+
   let eventInfo = document.getElementById('eventInfo');
   let info = eventInfo.value;
   eventInfo.value = '';
 
-  let event = new Event(id, name, date, format, sinopsis, info, "");
+  let event = new Event(id, name, date, format, synopsis, info);
 
   console.log(event); //TEST
   database.addEvent(event);
