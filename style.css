@@ -98,7 +98,8 @@ header {
   background-color: #76C4E2;
  }
 
- .deskFindEvents, .deskFindEventsMP {
+ .deskFindEvents, 
+ .deskFindEventsMP {
   background-color: #1F8FED;
   margin: 0;
   padding: 0;
@@ -121,15 +122,18 @@ header {
   margin-bottom: 0;
 }
 
- input.filter, input.filterMP {
+/*  input.filter, 
+ input.filterMP {
   display: none;
-}
+} */
 
-.label, .labelMP {
+.label, 
+.labelMP {
   cursor:pointer; 
 }
 
-#menu, #menuMP {
+#menu, 
+#menuMP {
   padding: 1em;
   padding-left: 15%; ;
   background-color: #76C4E2; 
@@ -164,17 +168,18 @@ header {
 #conferenceMP:checked ~ #lblConferenceMP,
 #classMP:checked ~ #lblClassMP,
 #networkingMP:checked ~ #lblNetworkingMP  {
-  background-color: #1F8FED;
-  color: white;
+/*   background-color: #1F8FED;
+  color: white; */
   display: flex;
 }
 
-.filterEvents .label:hover, 
+/* .filterEvents .label:hover, 
 .filterEventsMP .labelMP:hover {
   display: flex;
   background-color: #1F8FED;
-}
+} */
 
+.sortEvents label,
 .menu-item label, 
 .menu-itemMP label {
   font-size: 1.1em;
@@ -194,7 +199,7 @@ ul {
   font-weight: bold;
 }
 
-#btnFilters {
+/* #btnFilters {
   box-shadow: 3px 4px 0px 0px #104d80;
 	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
 	background-color:#1F8FED;
@@ -209,9 +214,9 @@ ul {
 	padding:7px 25px;
   margin: 15px 3px; 
   margin-left: 3em;
-  }
+  } */
 
-#btnFilters:hover, 
+/* #btnFilters:hover,  */
 #deleteEventBtn:hover, 
 #addPicture:hover, 
 #btnAddEvent:hover, 
@@ -220,6 +225,7 @@ ul {
   background-color:#378de5;
   color:white;
 }
+
 button:active {
   position:relative;
   top:1px;
@@ -339,7 +345,8 @@ button:hover {
   text-align: justify;
 }
 
-#btnAddEvent, #btnRegist {
+#btnAddEvent, 
+#btnRegist {
   box-shadow: 3px 4px 0px 0px #104d80;
 	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
 	background-color:#1F8FED;
