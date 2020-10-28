@@ -183,7 +183,7 @@ header {
   padding: 0.7em;
 }
 
-ul, {
+ul {
   list-style-type: none;
 }
 
@@ -491,4 +491,11 @@ hr {
     margin-top: -10px;
     max-block-size: 8em;
   }
+}
+
+/* All Events */
+#tableEventsList {
+  table-layout: auto;
+  width: 50em;
+  text-align: left;
 }
