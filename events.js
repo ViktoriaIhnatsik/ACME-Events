@@ -53,6 +53,7 @@ function displayEvents() {
   let events = database.readDataFromStorage();
 
   // Filter events using filters
+
   if (filters.date.enabled) {
     // Filter by date
     const inputFromDate = document.getElementById('fromDate');
@@ -80,8 +81,50 @@ function displayEvents() {
   }
 
   if (filters.format.enabled) {
-    // Filter by format
-    // ...
+    // Filter by format=====================!!!
+
+    const inputToFormat = document.getElementById('filterFormat');
+    const inputConference = document.getElementById('filterConference');
+    const inputClass = document.getElementById('filterClass');
+    const inputNetworking = document.getElementById('filterNetworking');
+    console.log(filters.format); //TEST
+    
+    if (inputToFormat.value !== '') {
+      if (inputConference.checked) {
+        let fformat = 'conference';
+        events = events.filter((e) => {
+          const eFormat = e.format;
+          console.log(inputConference.checked, fformat, e.format); //TEST
+
+          if (fformat !== '' && eFormat === fformat) {
+            console.log('lalala');
+            return true;
+          }
+        })
+      } else if (inputClass.checked) {
+        let fformat = 'class';
+        events = events.filter((e) => {
+          const eFormat = e.format;
+          if (fformat !== '' && eFormat === fformat) {
+            console.log('rururula');
+            return true;
+          }
+        })
+      } else if (inputNetworking.checked) {
+        let fformat = 'networking';
+        events = events.filter((e) => {
+          const eFormat = e.format;
+          if (fformat !== '' && eFormat === fformat) {
+            console.log('bababaalala');
+            return true;
+          }
+        })
+      } else {
+        return false;
+        console.log('fofofo');
+      }
+    }
+
   }
 
   // Sort events using sorting
@@ -174,7 +217,7 @@ function updateFilters() {
     date: {
       enabled: filterDate.checked,
       from: fromDate.value,
-      to: toDate.value
+      to: toDate.value,
     },
     format: {
       enabled: filterFormat.checked,
