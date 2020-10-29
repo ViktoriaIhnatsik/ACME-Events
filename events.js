@@ -55,8 +55,30 @@ function displayEvents() {
   // Filter events using filters
   if (filters.date.enabled) {
     // Filter by date
-    // ...
+    const inputFromDate = document.getElementById('fromDate');
+    let fromDate = null;
+    if (inputFromDate.value !== '') {
+      fromDate = new Date(inputFromDate.value);
+    }
+
+    const inputToDate = document.getElementById('toDate');
+    let toDate = null;
+    if (inputToDate.value !== '') {
+      toDate = new Date(inputToDate.value);
+    }
+    
+    events = events.filter((e) => {
+      const eDate = new Date(e.date);
+      if (fromDate !== null && eDate < fromDate) {
+        return false;
+      }
+      if (toDate !== null && eDate > toDate) {
+        return false;
+      }
+      return true;
+    });
   }
+
   if (filters.format.enabled) {
     // Filter by format
     // ...
