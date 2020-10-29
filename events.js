@@ -1,6 +1,7 @@
+const database = new Database();
+
 document.addEventListener("DOMContentLoaded", () => {
-  const database = new Database();
-  displayEvents(database);
+  displayEvents();
 
   const btnSort = document.getElementById('btnSort');
   const btnFilters = document.getElementById('btnFilters');
@@ -28,21 +29,77 @@ document.addEventListener("DOMContentLoaded", () => {
   btnSort.addEventListener('click', () => {
     updateSorting ();
     
-    displayEvents(database);
+    displayEvents();
   });
 
   btnFilters.addEventListener('click', () => {
     updateFilters ();
-    displayEvents(database);
+    displayEvents();
   });
 });
 
-let sorting;
-let filters;
+// Default values for sorting and filters
+let sorting = 'byDate';
+let filters = {
+  date: {
+    enabled: false
+  },
+  format: {
+    enabled: false
+  }
+};
 
-function displayEvents(database) {
- 
+function displayEvents() { 
   let events = database.readDataFromStorage();
+
+  // Filter events using filters
+  if (filters.date.enabled) {
+    // Filter by date
+    const inputFromDate = document.getElementById('fromDate');
+    let fromDate = null;
+    if (inputFromDate.value !== '') {
+      fromDate = new Date(inputFromDate.value);
+    }
+
+    const inputToDate = document.getElementById('toDate');
+    let toDate = null;
+    if (inputToDate.value !== '') {
+      toDate = new Date(inputToDate.value);
+    }
+    
+    events = events.filter((e) => {
+      const eDate = new Date(e.date);
+      if (fromDate !== null && eDate < fromDate) {
+        return false;
+      }
+      if (toDate !== null && eDate > toDate) {
+        return false;
+      }
+      return true;
+    });
+  }
+
+  if (filters.format.enabled) {
+    // Filter by format
+    // ...
+  }
+
+  // Sort events using sorting
+  if (sorting === 'byName') {
+    events.sort((a, b) => {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      if (nameA < nameB) { return -1; }
+      if (nameA > nameB) { return 1; }
+      return 0;
+    });
+  } else if (sorting === 'byDate') {
+    events.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateA - dateB;
+    });
+  }
 
   let divEventsList = document.getElementById('divEventsList');
   divEventsList.innerHTML = '';
@@ -94,7 +151,7 @@ function displayEvents(database) {
 }
 
 function updateSorting() {
-  let name = document.getElementById('byNames');
+  let name = document.getElementById('byName');
   if (name.checked) {
     sorting = 'byName';
   } else {
@@ -113,8 +170,6 @@ function updateFilters() {
   let filterClass = document.getElementById('filterClass');
   let filterNetworking = document.getElementById('filterNetworking');
 
-  
-
   filters = {
     date: {
       enabled: filterDate.checked,
@@ -129,5 +184,4 @@ function updateFilters() {
     }
   }
   console.log(filters); //TEST
-
 }

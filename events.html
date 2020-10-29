@@ -33,18 +33,18 @@
         <h3 id='findEvents'>Find Events</h3>
       </div> -->
 
-      <div class = "wrapperSortAndFilter">
-        <div class = "sortEvents">
-          <h3 id="titelSorting">Sorting:</h3>
+      <div class="wrapperSortAndFilter">
+        <div class="sortEvents">
+          <h3>Sorting:</h3>
           <input type="radio"  class="sort" name="sort" id="byDate" checked>
-          <label class="labelAE" for="byDates" id="lblByDate">By Date</label><br>
-          <input type="radio"  class="sort" name="sort" id="byNames">
-          <label class="labelAE" for="byNames" id="lblByNames">By Name</label><br>
+          <label class="labelAE" for="byDate" id="lblByDate">By Date</label><br>
+          <input type="radio"  class="sort" name="sort" id="byName">
+          <label class="labelAE" for="byName" id="lblByName">By Name</label><br>
           <button id="btnSort">Apply</button><br> 
         </div>
 
         <div class="filterEvents">
-          <h3 id="titelFilters">Filters:</h3>
+          <h3>Filters:</h3>
             <ul id="menu">
               <li class="menu-item">
                 <input type="checkbox" class="filter" for="filterDate" id="filterDate"></input>
@@ -56,7 +56,7 @@
                   </li>
                   <li>
                     <label class="labelAE" for="toDate" id="lblToDater">To</label>
-                    <input type="date" class="filter" name="filter" id="toDate"value="" disabled>
+                    <input type="date" class="filter" name="filter" id="toDate" value="" disabled>
                   </li>
                 </ul>
               </li>
@@ -105,9 +105,9 @@
   </footer>
 
   <!-- <script src="crud.js"></script> -->
-  <script src="event.js"></script>
-  <script src="allEvents.js"></script>
   <script src="database.js"></script>
+  <script src="event.js"></script>
+  <script src="events.js"></script>
   
 </body>
 
