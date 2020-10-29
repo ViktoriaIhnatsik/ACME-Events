@@ -1,5 +1,5 @@
 class Event {
-  constructor(id, name, date, format, img, synopsis, info, /*img*/) {
+  constructor(id, name, date, format, img, synopsis, info, popularEvent) {
     this.id = id;
     this.name = name;
     this.date = date;
@@ -7,7 +7,7 @@ class Event {
     this.img = img; 
     this.synopsis = synopsis;
     this.info = info;
-    /*this.img = img; */
+    this.popularEvent = popularEvent;
   }
 }
 

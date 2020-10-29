@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   eventsContainer.innerHTML = '';
   // for each event from localStorage with flag (true)
   events
-    .filter(item => item.popularEvents)
-  events.forEach((item) => {
+    .filter(item => item.popularEvent)
+    .forEach((item) => {
     eventDiv = document.createElement('div');
     eventDiv.setAttribute('class', 'photo');
     eventDiv.setAttribute('id', item.id);
