@@ -91,40 +91,22 @@ function displayEvents() {
     
     if (inputToFormat.value !== '') {
       if (inputConference.checked) {
-        let fformat = 'conference';
-        events = events.filter((e) => {
-          const eFormat = e.format;
-          console.log(inputConference.checked, fformat, e.format); //TEST
-
-          if (fformat !== '' && eFormat === fformat) {
-            console.log('lalala');
-            return true;
-          }
-        })
+        checkFilter("conference")
       } else if (inputClass.checked) {
-        let fformat = 'class';
-        events = events.filter((e) => {
-          const eFormat = e.format;
-          if (fformat !== '' && eFormat === fformat) {
-            console.log('rururula');
-            return true;
-          }
-        })
+        checkFilter("class")
       } else if (inputNetworking.checked) {
-        let fformat = 'networking';
-        events = events.filter((e) => {
-          const eFormat = e.format;
-          if (fformat !== '' && eFormat === fformat) {
-            console.log('bababaalala');
-            return true;
-          }
-        })
-      } else {
-        return false;
-        console.log('fofofo');
+        checkFilter("networking")
       }
     }
-
+    function checkFilter(eventType) {
+      let fformat = eventType;
+      events = events.filter((e) => {
+        const eFormat = e.format;
+        if (fformat !== '' && eFormat === fformat) {
+          return true;
+        }
+      })
+    }
   }
 
   // Sort events using sorting
