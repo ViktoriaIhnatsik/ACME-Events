@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Create personal eventpage
     let params = new URLSearchParams(document.location.search.substring(1));
     let eventId = params.get("id");
     console.log(eventId);
@@ -6,11 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let events = database.readDataFromStorage();
     let event = events.find(e => e.id == eventId);
     if (event) {
+        // create titlepage and fill it
         let eventContent = document.getElementById("eventContent");
         let photoDiv = document.createElement("div");
         photoDiv.setAttribute("class", "bigPhoto");
         photoDiv.setAttribute("data-title", event.name);
         photoDiv.setAttribute("id", "p1");
+        
         let img = document.createElement('img');
         img.setAttribute('class', 'photo');
         img.setAttribute('src', event.img);

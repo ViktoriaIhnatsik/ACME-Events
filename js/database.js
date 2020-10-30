@@ -4,7 +4,7 @@ class Database {
     const stringData = window.localStorage.getItem('Events');
     if (!stringData) {
       return [];
-    }
+    } // else
     const data = JSON.parse(stringData);
     return data;
   }
@@ -19,7 +19,7 @@ class Database {
     let newEvents = events.filter((event) => (event.id !== id));
     this.saveDataToStorage(newEvents);           
   }
-
+  
   addEvent(event) {
     const events = this.readDataFromStorage();
     events.push(event);                  
