@@ -1,5 +1,5 @@
 const database = new Database();
-
+// events on firstpage
 const popularEvents = [
   new Event("event1", "Hackaton", "2020-11-09", "conference", "images/confHacaton .png", "The world’s largest API Integration hackathon.", "API World is produced and owned by DevNetwork, the worlds developer event community and producer of leading conferences for the developer, engineering & IT industries. By registering for this event, you are opting into DevNetwork email updates and one-time email-based promotions from top-level API World 2020 sponsors including exclusive invitations to API World 2020 parties and partner events. These updates will notify you about API World 2020 news, as well as announcements about DevNetwork events and services. You can opt out of DevNetwork email updates at any time.", true),
   new Event("event2", "DeveloperWeek Global: Enterprise 2020", "2020-11-10", "conference", "images/conDevConf.jpeg", "DeveloperWeek Global is produced and owned by DevNetwork, the world's developer event community and producer of leading conferences for the developer, engineering & IT industries.", "DeveloperWeek Global is produced and owned by DevNetwork, the world's developer event community and producer of leading conferences for the developer, engineering & IT industries. By registering for this event, you are opting into DevNetwork email updates and one-time email-based promotions from top-level DeveloperWeek Global 2020 sponsors including exclusive invitations to DeveloperWeek Global 2020 parties and partner events. These updates will notify you about DeveloperWeek Global 2020 news, as well as announcements about DevNetwork events and services.", true),
@@ -13,12 +13,14 @@ const popularEvents = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  // fill array with the events that are in localstorage
   let events = database.readDataFromStorage();
+  // if all are deleted from localstorage, "reset" and show all events from array popularEvents
   if (events.length == 0) {
     database.saveDataToStorage(popularEvents);
     events = popularEvents;
   }
-
+  // fill homepage CONTINUE HERE 
   let eventsContainer = document.getElementById('mainContent');
   eventsContainer.innerHTML = '';
   // for each event from localStorage with flag (true)
