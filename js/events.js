@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let fromDate = document.getElementById('fromDate');
   let toDate = document.getElementById('toDate');
 
+  // Checkbox for accessing precise dates
   filterDate.addEventListener('change', e => {
     /*
     if(e.target.checked){
@@ -27,13 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   btnSort.addEventListener('click', () => {
-    updateSorting ();
+    updateSorting();
     
     displayEvents();
   });
 
   btnFilters.addEventListener('click', () => {
-    updateFilters ();
+    updateFilters();
     displayEvents();
   });
 });
@@ -49,13 +50,12 @@ let filters = {
   }
 };
 
+// Filter events using different filters
 function displayEvents() { 
   let events = database.readDataFromStorage();
 
-  // Filter events using filters
-
+  // Filter by date
   if (filters.date.enabled) {
-    // Filter by date
     const inputFromDate = document.getElementById('fromDate');
     let fromDate = null;
     if (inputFromDate.value !== '') {
@@ -67,7 +67,7 @@ function displayEvents() {
     if (inputToDate.value !== '') {
       toDate = new Date(inputToDate.value);
     }
-    
+    // Place date in correct order
     events = events.filter((e) => {
       const eDate = new Date(e.date);
       if (fromDate !== null && eDate < fromDate) {
@@ -80,15 +80,14 @@ function displayEvents() {
     });
   }
 
+  // Filter by format
   if (filters.format.enabled) {
-    // Filter by format=====================!!!
-
     const inputToFormat = document.getElementById('filterFormat');
     const inputConference = document.getElementById('filterConference');
     const inputClass = document.getElementById('filterClass');
     const inputNetworking = document.getElementById('filterNetworking');
-    console.log(filters.format); //TEST
     
+    // Check which radiobutton is active
     if (inputToFormat.value !== '') {
       if (inputConference.checked) {
         checkFilter("conference")
@@ -98,6 +97,8 @@ function displayEvents() {
         checkFilter("networking")
       }
     }
+
+    // Return the correct type based on radiobutton
     function checkFilter(eventType) {
       let fformat = eventType;
       events = events.filter((e) => {
@@ -109,7 +110,7 @@ function displayEvents() {
     }
   }
 
-  // Sort events using sorting
+  // Sort events by name
   if (sorting === 'byName') {
     events.sort((a, b) => {
       const nameA = a.name.toLowerCase();
@@ -118,6 +119,7 @@ function displayEvents() {
       if (nameA > nameB) { return 1; }
       return 0;
     });
+    // Sort events by date
   } else if (sorting === 'byDate') {
     events.sort((a, b) => {
       const dateA = new Date(a.date);
@@ -126,6 +128,7 @@ function displayEvents() {
     });
   }
 
+  // Create a table to show events
   let divEventsList = document.getElementById('divEventsList');
   divEventsList.innerHTML = '';
 
@@ -152,8 +155,8 @@ function displayEvents() {
   nameThTableEventsL.innerHTML = 'Name';
   tr1TableEventsL.appendChild(nameThTableEventsL);
 
-
-  events.forEach((item) => {              //  skapa en rad för varje event från Events array
+  // Fylla table en rad för varje event från Events array
+  events.forEach((item) => {
     let trTableEventsL = document.createElement('tr');
     trTableEventsL.id = 'trTableEventsL' + item.id;
     tableEventsList.appendChild(trTableEventsL);
@@ -182,7 +185,6 @@ function updateSorting() {
   } else {
     sorting = 'byDate';
   }
-  console.log(sorting); //TEST
 }
 
 function updateFilters() {
@@ -208,5 +210,4 @@ function updateFilters() {
       filterNetworking: filterNetworking.checked,
     }
   }
-  console.log(filters); //TEST
 }

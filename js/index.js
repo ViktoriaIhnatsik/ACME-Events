@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     database.saveDataToStorage(popularEvents);
     events = popularEvents;
   }
-  // fill homepage CONTINUE HERE 
+  
   let eventsContainer = document.getElementById('mainContent');
   eventsContainer.innerHTML = '';
   // for each event from localStorage with flag (true)
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     img.setAttribute('class', 'photo');
     img.setAttribute('src', item.img);
     eventDiv.appendChild(img);
+
     img.addEventListener("click", function () {
       document.location.href = 'eventTitell.html?id=' + item.id;
     })
