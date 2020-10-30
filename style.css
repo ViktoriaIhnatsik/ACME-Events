@@ -107,15 +107,17 @@ header {
 
 .aboutInfo > p { 
   color: #1F294C;
-  font-size: 1.3em;
-  padding-left: 1em;  
-  padding-right: 1em;  
+  font-size: 1.1em;
+  padding-left: 0.5em;  
+  padding-right: 1em;
+  margin-left: 0.8em; 
+  margin-right: 0.8em;   
   text-align: justify;
 }
 
-.aboutInfo > img {
-  width: 100%;
-  bottom: 0;
+span {
+  font-weight: bold;
+  color: #0b1b57;
 }
 
  .filterClmn {
