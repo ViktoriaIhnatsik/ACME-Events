@@ -4,7 +4,7 @@ class Database {
     const stringData = window.localStorage.getItem('Events');
     if (!stringData) {
       return [];
-    }
+    } // else
     const data = JSON.parse(stringData);
     return data;
   }

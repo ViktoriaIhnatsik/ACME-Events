@@ -155,7 +155,7 @@ function displayEvents() {
   nameThTableEventsL.innerHTML = 'Name';
   tr1TableEventsL.appendChild(nameThTableEventsL);
 
-  // Fylla table en rad för varje event från Events array
+  // Fill table en rad för varje event från Events array
   events.forEach((item) => {
     let trTableEventsL = document.createElement('tr');
     trTableEventsL.id = 'trTableEventsL' + item.id;
