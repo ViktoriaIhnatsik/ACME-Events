@@ -4,107 +4,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACME EventS</title>
+  <title>ACME Events</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
-  <section class="header">
-    <img class="headerLogo" src="pic/logo_grupp2.png">
-    <!--  LOGO -->
-    <!--<h1 class="title">ACME</h1>-->
-    <!-- navigation' menu -->
-  </section>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <a href="./index.html"><img class="headerLogo" src="pic/logo_grupp2.png"></a>
+        <ul>
+          <li><a class="current" href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="aboutUs.html">About us</a></li>
+          <li><a href="crud.html">Log in</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <h2 class="slogan">Popular in ours Events:</h2>
 
   <section class="wrapper">
-    <div class="leftClmn">
-      <div class="deskFindEvents">
-        <h3>Find Events</h3>
-      </div>
-      <div class="filterEvents">
-        <h3>Filters:</h3>
-        <ul id="menu">
-          <li class="menu-items">
-            <a id="date">Date</a>
-            <ul class="sub-menu">
-              <li>
-                <a>October</a>
-              </li>
-              <li>
-                <a>November</a>
-              </li>
-              <li>
-                <a>December</a>
-              </li>
-            </ul>
-          </li>
-          <!--</ul>-->
-
-          <li class="menu-item">
-            <a>Format</a>
-            <ul class="sub-menu">
-              <li>
-                <a>Conference</a>
-              </li>
-              <li>
-                <a>Class</a>
-              </li>
-              <li>
-                <a>Networking</a>
-              </li>
-            </ul>
-
-          </li>
-
+    <div class="leftClmn filterClmnMP">
+      <div class="deskFindEventsMP">
+        <h3 id='findEventsMP'>About ACME Events</h3>
+        </div>
+  
+        <div class="aboutInfo">
+          <p>Our vision is to create a better everyday life for everybody. On this site you can discover Events that inspires you.</p>
+          <p>2020 has been a tough year for all of us and with fewer meetings, more people have gone online now more than ever. </p>
+          <p>We have many events for you, to participate in from the safety of your own home.</p>
+          <p>We know you'll find an event that suits you, thanks for using ACME Events!</p>
+          <img src="homescreenpic.jpg" alt="">
+        </div>
       </div>
     </div>
-    </ul>
 
-    <div class="mainContent">
-      <div class="photo" id="p1" data-title="The world’s largest API Integration hackathon.">
-        <img class="photo" src="confHacaton .png">
-      </div>
-      <div class="photo" id="p2" data-title="Event2">
-        <img class="photo" src="conDevConf.jpeg">
-      </div>
-      <div class="photo" id="p3" data-title="Event3">
-        <img class="photo" src="confAIDevWorld.jpeg">
-      </div>
-      <div class="photo" id="p4" data-title="Event4">
-        <img class="photo" src="classIntrToHack.jpeg">
-      </div>
-      <div class="photo" id="p5" data-title="Event5">
-        <img class="photo" src="classIntroToCoding.jpeg">
-      </div>
-      <div class="photo" id="p6" data-title="Event6">
-        <img class="photo" src="classPythonOnline.jpeg">
-      </div>
-      <div class="photo" id="p7" data-title="Event7">
-        <img class="photo" src="nwVIRSoftwareEngiC.jpeg">
-      </div>
-      <div class="photo" id="p8" data-title="Event8">
-        <img class="photo" src="netwCODEBREWSVirt.jpeg">
-      </div>
-      <div class="photo" id="p9" data-title="Event9">
-        <img class="photo" src="netwCoceTogether.jpeg">
-      </div>
+    <div class="mainContent" id="mainContent">
     </div>
   </section>
 
   <footer class="footer">
     <div class="trademark">
-      ACME Events <br>
+      ACME Events<br>
       Karlavägen 13<br>
-      114 49 Stockholm
-      </div>
+      114 49 Stockholm<br>
+    </div>
     <div class="adress">
-      Phone:  + 46 (0)8-234 67 78 <br>
+      Phone: + 46 (0)8-234 67 78<br>
       Email: info@acme.se
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/event.js"></script>
+  <script src="js/index.js"></script>
+
 </body>
 
-</html>
+</html> 

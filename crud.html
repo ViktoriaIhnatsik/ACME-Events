@@ -7,59 +7,65 @@
   <title>CRUD</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
-  <section class="header">
-    <img class="headerLogo" src="pic/logo_grupp2.png">
-    <!--  LOGO -->
-    <!--<h1 class="title">ACME</h1>-->
-    <!-- navigation' menu -->
-  </section>
-
-  <section class="wrapperCrud">
-    <div class="textToAdmin">Hi Admin!</div>
-
-    <div class="deleteEvent">
-      <h2>If you want to delete an event first choose it:</h2>
-      <div class="modalDialog">
-        <button id="deleteEventBtn">Choose event here</button>
-        <div id="openModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-            
-          </div>
-        </div>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <a href="./index.html"><img class="headerLogo" src="pic/logo_grupp2.png"></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="aboutUs.html">About us</a></li>
+          <li><a class="current" href="crud.html">Log in</a></li>
+        </ul>
       </div>
+    </nav>
+  </header>
+  <h2 class="slogan">Hi Admin!</h2>
+  <section class="wrapperCrud">
+    <h4>If you want to delete an event first choose it:</h4>
+    <div class="deleteEvent" id="tableContainer">
     </div>
 
-    <div class="addEvent"></div>
-    <h2>If you want to add a new event fill form:</h2>
-    <label for="eventName">Add event's title:</label><br>
-    <input type="text" id="eventName" name="eventName"><br>
+    <hr>
 
-    <label for="eventDate">Add event's date:</label><br>
-    <input type="date"> <br> 
+    <div class="addEvent">
+      <h4>If you want to add a new event fill form:</h4>
+
+      <label for="eventId">Add event's Id:</label><br>
+      <input type="text" id="eventId" name="eventId" ><br>
+
+      <label for="eventName">Add event's title:</label><br>
+      <input type="text" id="eventName" name="eventName"><br>
+  
+      <label for="eventDate">Add event's date:</label><br>
+      <input type="date" id="eventDate"> <br> 
+      
+      <form class="chooseEventFormat">
+        <label for="eventFormat">Choose event's format:</label><br>
+        <input type="radio" id="eventConference" name="chooseEventFormat" value="conference">
+        <label for="conference">Conference</label><br>
+        <input type="radio" id="eventClass" name="chooseEventFormat" value="class">
+        <label for="class">Class</label><br>
+        <input type="radio" id="eventNetworking" name="chooseEventFormat" value="networking" checked>
+        <label for="networking">Networking</label><br>
+      </form>
+  
+      <label for="addPicture">Choose a picture for the event:</label><br>
+      <button id="addPicture">Add picture</button><br><br>
+
+      <label for="eventSynops">Add event's synopsis:</label><br>
+      <textarea id="eventSynops" name="eventSynops" placeholder="Enter text here..."></textarea><br>
+  
+      <label for="eventInfo">Add event's information:</label><br>
+      <textarea id="eventInfo" name="eventInfo" placeholder="Enter text here..."></textarea><br>
+  
+      <button id="btnAddEvent">Add new event</button><br> <br>
+    </div>
     
-    <form class="chooseEventFormat">
-      <label for="eventFormat">Choose event's format:</label><br>
-      <input type="radio" id="Conference" name="events">
-      <label for="Conference">Conference</label><br>
-      <input type="radio" id="Class" name="events">
-      <label for="Class">Class</label><br>
-      <input type="radio" id="Networking" name="events">
-      <label for="Networking">Networking</label><br>
-    </form>
-
-    <label for="addPicture">Choose a picture for the event:</label><br>
-    <button id="addPicture">Add picture</button><br>
-
-    <label for="eventInfo">Add event's information:</label><br>
-    <textarea id="eventInfo" name="eventInfo" placeholder="Enter text here..."></textarea><br>
-
-    
-    <button id="btnAddEvent">Add new event</button><br> 
   
   </section>
 
@@ -76,7 +82,9 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/event.js"></script>
+  <script src="js/crud.js"></script>
 </body>
 
 </html>

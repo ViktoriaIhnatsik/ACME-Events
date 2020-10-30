@@ -1,3 +1,16 @@
+class Event {
+  constructor(id, name, date, format, img, synopsis, info, popularEvent) {
+    this.id = id;
+    this.name = name;
+    this.date = date;
+    this.format = format;
+    this.img = img; 
+    this.synopsis = synopsis;
+    this.info = info;
+    this.popularEvent = popularEvent;
+  }
+}
+
 /*
 
 MENU:
@@ -6,7 +19,6 @@ Main
 All events
 About us
 Log in
-
 
 Database (the one in localStorage):
 [
@@ -35,8 +47,6 @@ Event:
   ]
 }
 
-
-
 CRUD page:
 
 1. Table
@@ -49,8 +59,6 @@ CRUD page:
   [description]
   etc.
   [Button "Create"]
-
-
 
 Events page:e
 
@@ -66,8 +74,6 @@ Filters:
     1.1. Bonus: the dropdown only shows the months that exist in the database.
   2. Dropdown with formats: always three items in there.
     2.1. Bonus: the dropdown only shows existing formats.
-
-
 
 metod filter 
 metod Add (->User)

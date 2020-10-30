@@ -18,7 +18,7 @@ By registering for this event, you are opting into DevNetwork email updates and 
 
 2. DeveloperWeek Global: Enterprise 2020
 
-About this Event
+
 November 10, 2020
 
 pic conDevConf
@@ -27,7 +27,6 @@ DeveloperWeek Global is produced and owned by DevNetwork, the world's developer 
 
 DeveloperWeek Global is produced and owned by DevNetwork, the world's developer event community and producer of leading conferences for the developer, engineering & IT industries.
 By registering for this event, you are opting into DevNetwork email updates and one-time email-based promotions from top-level DeveloperWeek Global 2020 sponsors including exclusive invitations to DeveloperWeek Global 2020 parties and partner events. These updates will notify you about DeveloperWeek Global 2020 news, as well as announcements about DevNetwork events and services. 
-.
 
 
  3. AI DevWorld 2020 
@@ -36,7 +35,10 @@ November 10, 2020
 
 AI & Machine Learning developer conference
 
+pic    confAiDevWorld
+
 AI DevWorld 2020 (October 27-29)) is the world’s largest AI & Machine Learning developer conference, with tracks covering: Open Source AI libraries, Chatbots, Machine Learning-as-a-Service, AI for the Enterprise, Deep AI/Neural Networks & more.
+
 The conference targets software engineers and data scientists who are looking for an introduction to AI, as well as AI dev professionals looking for a landscape view on the newest AI technologies.
 DeveloperWeek is produced and owned by DevNetwork, the world's developer event community and producer of leading conferences for the developer, engineering & IT industries.
 By registering for this event, you are opting into DevNetwork email updates and one-time email-based promotions from top-level AI DevWorld 2020 sponsors including exclusive invitations to AI DevWorld 2020 parties and partner events. These updates will notify you about AI DevWorld 2020 news, as well as announcements about DevNetwork events and services. You can opt out of DevNetwork email updates at any time.
@@ -45,6 +47,9 @@ By registering for this event, you are opting into DevNetwork email updates and 
 CLASS
 
 1.  Workshop: Introduction to Hacking
+
+November 19, 2020
+
 pic - classIntrToHack.
 
 Take this intro course to learn how hackers use cryptography to protect (and steal) data.
@@ -56,10 +61,13 @@ All that's needed to participate is a computer (Mac or Windows) and a stable int
 
 
 2. Intro to Coding Workshop
+
+December 15, 2020
+
 pic classIntroToCoding
 
 Introduction to coding workshop for Refugees, Asylum Seekers and other people from disadvantaged backgrounds
-About this Event
+
 Come and learn about the world of web development in our workshop. This workshop will cover the basic technical and soft skills required to start on a path towards a career in the tech sector. We will cover topics such as HTML basics, CSS Basics, and JS Basics.
 Agenda
 Intro to Coding workshop
@@ -83,9 +91,12 @@ Our Values:
 
 3.Intro to Coding: HTML & CSS | Akademi GA
 
+November 28, 2020
+
 pic classIntroToCodHTML
 
 Meet the programming languages that power the web, and write your first line of code.
+
 Step into the world of web development with General Assembly. During our introductory workshop, explore the building blocks of the web — HTML and CSS — and learn how you can apply these programming languages to develop your own simple sites. By writing your own lines of code, you’ll:
 * Get a closer look at how the developer community and many different fields benefit from coding knowledge.
 * Learn how HTML and CSS function together to form the backbone of the web.
@@ -100,12 +111,11 @@ Please note that in light of the current COVID-19 situation, the class will be l
 pic classPythonOnline
 
 Python Online Training | Instructor LED & Pure Hands-on Training | Learn from Basics to Advance | Enroll Now!
-About this Event
-About Python Online Training
+
+
 WHY PYTHON?
 Python is easy to use, powerful, and versatile, making it a great choice for beginners and experts alike.
 Python is a general-purpose language. Python was designed to be easy to understand and fun to use. Python’s readability makes it a great first programming language. This course will cover both basic and advance concepts of Python like Machine Learning, Artificial Intelligence, writing python scripts, Web Scraping, etc.
-About this Event
 Accelerate your Career with A Comprehensive Certified Python Training Program
 
 
@@ -113,10 +123,9 @@ Accelerate your Career with A Comprehensive Certified Python Training Program
 pic classFreeVIRTUALJs
 
 Free javascript class led by senior developer, Granger Abuhoff. First hour is for beginners, second hour is for intermediate developers.
-About this Event
+
 Welcome to our Weekly {FREE!} JS online class!
 We believe that live-lectures and getting to ask questions is an important part of learning. That's why we always try to create an open and interactive learning environment. So be prepared for Granger to ask you questions during class, yeah You! We'll be starting off with some js basics and then working on some js exercises. If you've signed up for the class remember to send an email to Nico: nico@bogotadev.com to get the pw for the zoom room! You're welcome to attend both sections :D See you Thursday!
-
 A little about your instructor:
 Granger is a senior full-stack Ruby developer. He worked for 5+ years in NYC as a fullstack developer before starting Bogota Dev with Nicolle.
 Granger enjoys a good discussion about programming best practices and why we should be teaching others to code from a young age.
@@ -127,6 +136,7 @@ pic classWebDisAndWebDev
 
 During This Presentation We Will Cover The Different Type Of Web Development/Design
 Solutions and Services That Is Available for Your Business
+
 What Can We Do For You?
 * Reducing Costs
 * Implementing Automation
@@ -140,28 +150,17 @@ What Can We Do For You?
 * Time Efficiency
 * Implementing Rapid Workflow
 
-Overview of Workshop/Webinar Subjects:
-* Frond-End
-* Back-End
-* Web Apps
-* Cloud Apps
-* UX/UI
-* Graphical Design
-* Content Design
-* Web Technologies
-* Layout
-* Design
-* Customer Experience (CX)
-* Usability
-* Graphics
 ===========================================
 NETWORKING
 
 1.VIRTUAL Software Engineering Course: Info Session 
+
+October 30, 2020
+
 pic nwVIRSoftwareEngiC
 
 Are you curious about how you can transition your career to one in Software Engineering? Learn how with Flatiron School San Francisco!
-About this Event
+
 Join a Flatiron School San Francisco Campus Director over Zoom to learn everything you need to know about how we can help make this possible through our Software Engineering course!
 Takeaways
 * What it's like to study at Flatiron School (In person vs Online courses)
@@ -172,10 +171,16 @@ Takeaways
 *You will receive a Zoom link on the day of the event!
 See you there!
 
-2. CODE + BREWS Virtual: Third Saturday
+
+
+2. CODE + BREWS Virtual
+
+November 02, 2020
+
 pic netwCODEBREWSVirt
+
 CODE + BREWS Virtual is back!
-About this Event
+
 CODE + BREWS Virtual is an inclusive, informal, co-working session for the developer community. People of all skill levels are invited to participate. The concept is simple, bring a laptop, coffee, breakfast, and ideas, and prepare to learn a new technical skill or, work on a side project, homework, or work.
 Here's how it works:
 1. At 9:15 everyone introduces themselves and briefly describes what brought them to CODE + BREWS today (projects, homework, networking, etc).
@@ -187,9 +192,14 @@ If you want to code (anything) and are at any skill level CODE + BREWS is for yo
 Who is helping promote this event?
 We are not a meetup or user group so we have partnered with local groups to help us promote and build CODE + BREWS community.
 
-3. Code Together | North MS A free community coding session
+
+3. Code Together | North MS 
+
+December 17, 2020
+
 pic netwCoceTogether
 
-Description
+A free community coding session
+
 Interested in coding with other people or getting help on a project that you're working on?  If you said yes to this, then this might be the event for you!  This Code Together event is a time for you to work alongside and connect with other people in your local community.  Now, it's important to note that this isn't a class, so there won't be a teacher, but it is your opportunity to talk with other people and get help jumpstarting your learning process or with a programming lesson / personal project you've been working on.  Come with your laptop, a notebook & pen, and/or a drive to learn!  1:00PM MEETUP INFO: We'll be meeting online via Zoom. To join, head on over to https://zoom.us/j/448902051
 

@@ -2,7 +2,6 @@
 this.login - name? email?
 this.password
 
-
 metod - logIn
 if button logIn tryck:
 skapa-öppna sidan med:
