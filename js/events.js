@@ -23,8 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     */
     fromDate.disabled = !e.target.checked;
     toDate.disabled = !e.target.checked;
-
   });
+
+  let filterFormat = document.getElementById('filterFormat');
+  filterFormat.addEventListener("change", e => {
+    filterClass.disabled = !e.target.checked;
+    filterConference.disabled = !e.target.checked;
+    filterNetworking.disabled = !e.target.checked;
+  })
 
 
   btnSort.addEventListener('click', () => {

@@ -21,6 +21,8 @@ header {
   display: grid;
   grid-area: header;
 }
+
+   
 /* Navbar */
 #navbar {
   background: #1F8FED;
@@ -52,7 +54,7 @@ header {
 
 #navbar ul li a:hover,
 #navbar ul li a.current {
-  background: #76C4E2;
+  background: rgba(118, 195, 226, 0.4);
 }
 
 .headerLogo {
@@ -92,22 +94,44 @@ header {
   margin-left: 2em;
   margin-bottom: 1.8em;
   min-width: 15em;
+  background-color: rgba(118, 195, 226, 0.3);
  }
 
- .filterClmn, .filterClmnMP {
-  background-color: #76C4E2;
+ #clmAboutAcme {
+  color: #1F294C;
+  background-color: rgba(31, 144, 237, 0.6);
+  margin-left: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.aboutInfo > p { 
+  color: #1F294C;
+  font-size: 1.1em;
+  padding-left: 0.5em;  
+  padding-right: 1em;
+  margin-left: 0.8em; 
+  margin-right: 0.8em;   
+  text-align: justify;
+}
+
+span {
+  font-weight: bold;
+  color: #0b1b57;
+}
+
+ .filterClmn {
+  background-color: rgba(118, 195, 226, 0.3);
  }
 
- .deskFindEvents, 
- .deskFindEventsMP {
-  background-color: #1F8FED;
+ .deskFindEvents {
+  background-color: rgba(118, 195, 226, 0.3);
   margin: 0;
   padding: 0;
-  padding-bottom: 1.5em;
   height: 4em;
 }
 
-#findEvents, #findEventsMP {
+#findEvents {
   font-size: 1.7em;
   margin-top: 0em;
   padding-left: 15%; 
@@ -118,15 +142,10 @@ header {
 #titelleFilters {
   margin-left: 15%;
   font-size: 1.4em;
-  color:#1F8FED;
+  color:rgba(118, 195, 226, 0.3);
   margin-top: 0.3em;
   margin-bottom: 0;
 }
-
-/*  input.filter, 
- input.filterMP {
-  display: none;
-} */
 
 .label, 
 .labelMP {
@@ -137,9 +156,9 @@ header {
 #menuMP {
   padding: 1em;
   padding-left: 15%; ;
-  background-color: #76C4E2; 
+  background-color: rgba(118, 195, 226, 0);
   list-style: none;
-  cursor:pointer; 
+  cursor: pointer; 
 }
 
 #lblAllEvents, #lblUpcomEvents, #lblAllEventsMP {
@@ -169,22 +188,13 @@ header {
 #conferenceMP:checked ~ #lblConferenceMP,
 #classMP:checked ~ #lblClassMP,
 #networkingMP:checked ~ #lblNetworkingMP  {
-/*   background-color: #1F8FED;
-  color: white; */
   display: flex;
 }
-
-/* .filterEvents .label:hover, 
-.filterEventsMP .labelMP:hover {
-  display: flex;
-  background-color: #1F8FED;
-} */
 
 ul {
   list-style-type: none;
 }
 
-/* #btnFilters:hover,  */
 #deleteEventBtn:hover, 
 #addPicture:hover, 
 #btnAddEvent:hover, 
@@ -221,7 +231,6 @@ button:hover {
    position: relative;
    max-width: 100%;
    max-height: 100%;
-   /* background-color: #8A7992; */
  }
 
  .photo:hover::after {       /* photo text with event's name */
@@ -247,16 +256,15 @@ footer {
   background-color: #1F294C;
   color: #F8F6F3;
 }
+
 .trademark{
   font-size: 0.7em;
   padding: 10px 15px; 
-  /* font-weight: bold; */
 }
 
 .adress{
   font-size: 0.7em;
   padding-top: 15px;
- /*  font-weight: bold; */
 }
 
 .bigPhoto {
@@ -341,11 +349,14 @@ button:hover {
 h4 {
   margin-top:0.7em;
 }
+.textToDelete {  
+  margin-top: 4em;
+}
 
 hr {
   border: none; 
   background-color: #1F8FED; 
-  height: 2px; /* Толщина линии */
+  height: 2px; 
   width: 30em;
   margin: 0.2em;
   }
@@ -358,6 +369,7 @@ hr {
   table-layout: auto;
   width: 50em;
   text-align: left;
+  margin-top: 2em;
 }
 
   /* ==The Modal (background) ==*/
@@ -425,18 +437,6 @@ hr {
   padding-top: 1em;
 }
 
-.aboutInfo > p {
-  color: rgba(19, 2, 92, 0.884);
-  font-size: 1.3em;
-  padding: 0.5em;
-  font-weight: bold;
-}
-
-.aboutInfo > img {
-  width: 100%;
-  bottom: 0;
-}
-
 @media screen and (max-width: 1200px) {
   .mainContent {
     grid-template-columns: 1fr 1fr;
@@ -444,11 +444,6 @@ hr {
   .aboutInfo > p {
     font-size: 1.2em;
     padding: 0.4em;
-    font-weight: bold;
-  }
-  #findEventsMP {
-    font-size: 1.6em;
-    padding-left: 5%;
   }
 }
 
@@ -458,7 +453,6 @@ hr {
   }
   .aboutInfo > p {
     padding: 0.3em;
-    font-weight: bold;
   }
 }
 
@@ -518,7 +512,7 @@ hr {
 }
 
 .filtersClmnTitel {
-  background-color: #1F8FED;
+  background-color: rgba(31, 144, 237, 0.6);
   margin-left: 0;
   height: 3em;
   margin-top: -2em;
