@@ -14,6 +14,8 @@ Innehåll:
 - Det ska finnas en detaljsida som visar detaljer för ett evenemang, innehåll, bilder, deltagare, kategorier, gästbok. Det behöver alltså inte finnas en detaljsida för varje evenemang utan bara en exempelsida som kan vara densamma för alla evenemang.
 - Det ska finnas ett administrationgränssnitt som låter en användare CRUD:a entiteter som evenemang, deltagare och kategorier.
 - Det ska finnas en "Om oss"-sida.
+
+
 Krav:
 - Applikationen ska vara objektorienterad med lämpliga klasser. Koden ska vara välskriven, välindenterad och välkommenterad.
 - Data ska sparas till och läsas från localStorage.
